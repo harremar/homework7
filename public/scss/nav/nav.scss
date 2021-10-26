@@ -42,13 +42,16 @@
   // align-items: center;
   justify-content: space-evenly;
   // background-color: blue;
+  #yourRecipesLink {
+    display: none;
+  }
 }
 
-.header li .btn {
+#loginbutton {
   width: 158px;
   height: 58px;
   border-radius: 26px;
-  background-color: #ffd972;
+  background-color: pink;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -68,10 +71,37 @@
   //   /* background-color: cadetblue; */
   // }
 }
-.header li .btn:hover {
+#loginbutton:hover {
   font-family: caveatB;
 }
-
+#logoutbutton {
+  width: 158px;
+  height: 58px;
+  border-radius: 26px;
+  background-color: #ffd972;
+  display: none;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 0 10px 6px rgba($color: #000000, $alpha: 0.16);
+  margin: -20px auto 0 auto;
+  color: black;
+  font-size: 25px;
+  font-family: caveatR;
+  // .header li a {
+  //   display: block;
+  padding: 20px 20px;
+  //   /* border-right: 1px solid #f4f4f4; */
+  //   text-decoration: none;
+  //   font-family: caveatR;
+  //   font-size: 25px;
+  //   color: black;
+  //   /* background-color: cadetblue; */
+  // }
+}
+#logoutbutton:hover {
+  font-family: caveatB;
+  display: none;
+}
 .header li a:hover {
   font-family: caveatB;
 }

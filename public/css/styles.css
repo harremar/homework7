@@ -115,12 +115,15 @@ a {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
+.header li #yourRecipesLink {
+  display: none;
+}
 
-.header li .btn {
+#loginbutton {
   width: 158px;
   height: 58px;
   border-radius: 26px;
-  background-color: #ffd972;
+  background-color: pink;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -139,8 +142,34 @@ a {
   padding: 20px 20px;
 }
 
-.header li .btn:hover {
+#loginbutton:hover {
   font-family: caveatB;
+}
+
+#logoutbutton {
+  width: 158px;
+  height: 58px;
+  border-radius: 26px;
+  background-color: #ffd972;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  margin: -20px auto 0 auto;
+  color: black;
+  font-size: 25px;
+  font-family: caveatR;
+  padding: 20px 20px;
+}
+
+#logoutbutton:hover {
+  font-family: caveatB;
+  display: none;
 }
 
 .header li a:hover {

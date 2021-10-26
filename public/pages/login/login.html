@@ -8,8 +8,11 @@
       <li><a href="#/home">Home</a></li>
       <li><a href="#/browse">Browse</a></li>
       <li><a href="#/create">Create Recipes</a></li>
+      <li id="yourRecipesLink"><a  href="#/yourRecipes">Your Recipes</a></li>
       
-      <li><a href="#/login"><div class="btn">login</div></a></li>
+      <li><a href="#/login"><div id="loginbutton" class="btn">login</div></a></li>
+      <li><a  href="#/login"><div id="logoutbutton" onclick="signOut()" class="btn">logout</div></a></li>
+   
     </ul>
   </header>
 
@@ -77,8 +80,8 @@
                 <div class="input-holder">
                     <input id="fName" type="firstName" placeholder="First Name" maxlength="30">
                     <input id="lName" type="lastName" placeholder="Last Name" maxlength="30">
-                    <input id="email" type="email" placeholder="Email Address" maxlength="30">
-                    <input id="password" type="password" placeholder="Password" maxlength="30">
+                    <input id="cemail" type="email" placeholder="Email Address" maxlength="30">
+                    <input id="cpassword" type="password" placeholder="Password" maxlength="30">
                 </div>
                 <a onclick="createUser()" id="createbtn" href="#"><div class="btn">Sign up</div></a>
             </div>

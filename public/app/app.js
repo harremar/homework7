@@ -12,10 +12,11 @@ function initFirebase() {
 
 function createUser() {
   console.log("signin was clicked");
-  let password = $("#password").val();
-  let email = $("#email").val();
+  let password = $("#cpassword").val();
+  let email = $("#cemail").val();
   let fName = $("#fName").val();
   let lName = $("#lName").val();
+  console.log(password + " and " + email);
   console.log(password);
   console.log(email);
   console.log(fName);
@@ -38,12 +39,26 @@ function createUser() {
       // ..
     });
 }
+let logoutbutton = document.getElementById("logoutbutton");
+let loginbutton = document.getElementById("loginbutton");
+
+let yourRecipesLink = document.getElementById("yourRecpesLink");
 
 function login() {
-  let password = $("password").val(); //$("#password").val();
-  let email = $("email").val();
+  //gets users password and email input
+  let password = $("#password").val(); //$("#password").val();
+  let email = $("#email").val();
+  //shows password and email in console
   console.log(password + " and " + email);
-  console.log("yay its sort of working");
+  //shows when login button is clicked
+  console.log("yay itsss sort of working");
+  //this gets rid of loginbutton in nav;
+  loginbutton.style.display = "none";
+  //this adds the logoutbutton to the nav
+  logoutbutton.style.display = "flex";
+  //this adds yourrecipes to the nav
+  yourRecipesLink.style.display = "flex";
+
   firebase
     .auth()
     .signInWithEmailAndPassword(email, password)
@@ -61,6 +76,7 @@ function login() {
 }
 
 function signOut() {
+  console.log("signout button has been clicked");
   firebase
     .auth()
     .signOut()
@@ -72,6 +88,12 @@ function signOut() {
       // An error happened.
       console.log(error);
     });
+  //this gets rid of logoutbutton in nav;
+  logoutbutton.style.display = "none";
+  //this adds the loginbutton to the nav
+  loginbutton.style.display = "flex";
+  //this removes yourrecipes from the nav
+  yourRecipesLink.style.display = "none";
 }
 //function that gets pageID
 function route() {
