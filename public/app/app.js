@@ -2,19 +2,24 @@ function initFirebase() {
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
       console.log("connected " + user.email);
-      $(".pName").css("display", "block");
+      // $(".pName").css("display", "block");
     } else {
       console.log("user is not there");
-      $(".pName").css("display", "none");
+      // $(".pName").css("display", "none");
     }
   });
 }
 
 function createUser() {
-  let password = "password"; //$("#password").val();
-  let email = "mArielleh724@gmail.com";
-  let fName = "marielle";
-  let lName = "harrell";
+  console.log("signin was clicked");
+  let password = $("#password").val();
+  let email = $("#email").val();
+  let fName = $("#fName").val();
+  let lName = $("#lName").val();
+  console.log(password);
+  console.log(email);
+  console.log(fName);
+  console.log(lName);
 
   firebase
     .auth()
@@ -23,6 +28,7 @@ function createUser() {
       // Signed in
       var user = userCredential.user;
       console.log(userCredential.user);
+      console.log("check 1 2 3");
       // ...
     })
     .catch((error) => {
@@ -34,8 +40,10 @@ function createUser() {
 }
 
 function login() {
-  let password = "password"; //$("#password").val();
-  let email = "mArielleh724@gmail.com";
+  let password = $("password").val(); //$("#password").val();
+  let email = $("email").val();
+  console.log(password + " and " + email);
+  console.log("yay its sort of working");
   firebase
     .auth()
     .signInWithEmailAndPassword(email, password)
@@ -82,35 +90,6 @@ function initListener() {
   //this gets page content
   $(window).on("hashchange", route);
   route();
-
-  // this should do something --want it to get login
-  $("#loginbtn").click(function (e) {
-    e.preventDefault();
-    console.log("login was clicked");
-    let btnID = e.currentTarget.id;
-    login();
-    // if (btnID == "create") {
-    //   createUser();
-    // } else if (btnID == "login") {
-    //   login();
-    // } else if (btnID == "signout") {
-    //   signOut();
-    // }
-  });
-  // this should do something
-  $("#createbtn").click(function (e) {
-    e.preventDefault();
-    console.log("sign in was clicked");
-    let btnID = e.currentTarget.id;
-    createUser();
-    // if (btnID == "create") {
-    //   createUser();
-    // } else if (btnID == "login") {
-    //   login();
-    // } else if (btnID == "signout") {
-    //   signOut();
-    // }
-  });
 }
 
 $(document).ready(function () {
