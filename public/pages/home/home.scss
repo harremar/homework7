@@ -1,0 +1,134 @@
+.home {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      to right,
+      rgba(242, 92, 84, 0.6),
+      rgba(242, 92, 84, 0.6)
+    ),
+    url(../images/hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .circle-holder {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    // background-color: yellowgreen;
+
+    .little-circle {
+      position: absolute;
+      width: 168px;
+      height: 168px;
+      background-color: #fcbcb8;
+      border-radius: 100px;
+      margin-left: 300px;
+      margin-top: -300px;
+      z-index: -0.5;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      box-shadow: 0 10px 6px rgba($color: #000000, $alpha: 0.16);
+
+      p {
+        text-align: center;
+        font-size: 10px;
+        font-family: latoI;
+        width: 105px;
+      }
+    }
+
+    .big-circle {
+      width: 358px;
+      height: 358px;
+      background-color: #ffd972;
+      border-radius: 200px;
+      z-index: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      box-shadow: 0 10px 6px rgba($color: #000000, $alpha: 0.16);
+
+      .text-holder {
+        width: 170px;
+        height: 170px;
+        text-align: center;
+        h1 {
+          font-family: caveatB;
+          font-size: 24px;
+          width: 162px;
+        }
+        p {
+          font-family: latoR;
+          font-size: 13px;
+          width: 162px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .home {
+    .circle-holder {
+      .little-circle {
+        margin-left: 130px;
+        margin-top: -380px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 370px) {
+  .home {
+    .circle-holder {
+      .little-circle {
+        height: 121px;
+        width: 121px;
+        margin-top: -260px;
+        margin-left: 130px;
+        p {
+          font-size: 8px;
+          width: 80px;
+          font-size: LatoI;
+        }
+      }
+      .big-circle {
+        height: 258px;
+        width: 258px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .text-holder {
+          // background-color: brown;
+          height: 100px;
+          h1 {
+            font-size: 17px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            // background-color: antiquewhite;
+            width: 100%;
+            height: 15px;
+            padding-top: 20px;
+          }
+          p {
+            font-size: 9px;
+            width: 112px;
+            height: 55px;
+            margin: 0 auto;
+            padding-bottom: 30px;
+            // background-color: antiquewhite;
+          }
+        }
+      }
+    }
+  }
+}

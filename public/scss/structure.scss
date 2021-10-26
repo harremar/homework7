@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+}
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: caveatR;
+  src: url(fonts/Caveat-Regular.ttf);
+}
+
+@font-face {
+  font-family: caveatB;
+  src: url(fonts/Caveat-Bold.ttf);
+}
+@font-face {
+  font-family: gillsansL;
+  src: url(fonts/GillSans-Light.ttf);
+}
+
+@font-face {
+  font-family: gillsansR;
+  src: url(fonts/GillSans.ttf);
+}
+
+@font-face {
+  font-family: latoR;
+  src: url(fonts/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: latoB;
+  src: url(fonts/Lato-Black.ttf);
+}
+
+@font-face {
+  font-family: latoL;
+  src: url(fonts/Lato-Light.ttf);
+}
+
+@font-face {
+  font-family: latoLI;
+  src: url(fonts/Lato-Lightitalic.ttf);
+}
+
+@font-face {
+  font-family: latoI;
+  src: url(fonts/Lato-Italic.ttf);
+}
+
+.app {
+  position: relative;
+  height: 100%;
+}
