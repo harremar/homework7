@@ -47,10 +47,6 @@ function createUser() {
       // ..
     });
 }
-// //this gets elements i want to change when user is logged in or logged out
-// let logoutbutton = document.getElementById("logoutbutton");
-// let loginbutton = document.getElementById("loginbutton");
-// let yourRecipesLink = document.getElementById("yourRecpesLink");
 
 //this function hapens when login button is clicked
 function login() {
@@ -69,7 +65,7 @@ function login() {
       // Signed in
       var user = userCredential.user;
       console.log("signed in");
-      alert("you have logged in")
+      alert("you have logged in");
       $("#loginbutton").css("display", "none");
       $("#logoutbutton").css("display", "flex");
       $("#yourRecipesLink").css("display", "flex");
@@ -90,7 +86,7 @@ function signOut() {
     .then(() => {
       // Sign-out successful.
       console.log("signed out");
-      alert("you are signed out")
+      alert("you are signed out");
       $("#loginbutton").css("display", "none");
       $("#logoutbutton").css("display", "flex");
       $("#yourRecipesLink").css("display", "flex");
