@@ -115,15 +115,17 @@ a {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
-.header li #yourRecipesLink {
+
+#yourRecipesLink {
   display: none;
+  color: maroon;
 }
 
 #loginbutton {
   width: 158px;
   height: 58px;
   border-radius: 26px;
-  background-color: pink;
+  background-color: #ffd972;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -135,7 +137,7 @@ a {
           justify-content: space-evenly;
   -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
-  margin: -20px auto 0 auto;
+  margin: 0 auto 0 auto;
   color: black;
   font-size: 25px;
   font-family: caveatR;
@@ -160,7 +162,7 @@ a {
           justify-content: space-evenly;
   -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
-  margin: -20px auto 0 auto;
+  margin: 0 auto 0 auto;
   color: black;
   font-size: 25px;
   font-family: caveatR;

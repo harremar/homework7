@@ -3,8 +3,14 @@ function initFirebase() {
     if (user) {
       console.log("connected " + user.email);
       // $(".pName").css("display", "block");
+      $("#loginbutton").css("display", "none");
+      $("#logoutbutton").css("display", "flex");
+      $("#yourRecipesLink").css("display", "flex");
     } else {
       console.log("user is not there");
+      $("#loginbutton").css("display", "flex");
+      $("#logoutbutton").css("display", "none");
+      $("#yourRecipesLink").css("display", "none");
       // $(".pName").css("display", "none");
     }
   });
@@ -30,20 +36,23 @@ function createUser() {
       var user = userCredential.user;
       console.log(userCredential.user);
       console.log("check 1 2 3");
+      alert("you have created an account");
       // ...
     })
     .catch((error) => {
       var errorCode = error.code;
       var errorMessage = error.message;
       console.log(errorMessage);
+      alert("error");
       // ..
     });
 }
-let logoutbutton = document.getElementById("logoutbutton");
-let loginbutton = document.getElementById("loginbutton");
+// //this gets elements i want to change when user is logged in or logged out
+// let logoutbutton = document.getElementById("logoutbutton");
+// let loginbutton = document.getElementById("loginbutton");
+// let yourRecipesLink = document.getElementById("yourRecpesLink");
 
-let yourRecipesLink = document.getElementById("yourRecpesLink");
-
+//this function hapens when login button is clicked
 function login() {
   //gets users password and email input
   let password = $("#password").val(); //$("#password").val();
@@ -52,12 +61,6 @@ function login() {
   console.log(password + " and " + email);
   //shows when login button is clicked
   console.log("yay itsss sort of working");
-  //this gets rid of loginbutton in nav;
-  loginbutton.style.display = "none";
-  //this adds the logoutbutton to the nav
-  logoutbutton.style.display = "flex";
-  //this adds yourrecipes to the nav
-  yourRecipesLink.style.display = "flex";
 
   firebase
     .auth()
@@ -66,7 +69,10 @@ function login() {
       // Signed in
       var user = userCredential.user;
       console.log("signed in");
-      // ...
+      alert("you have logged in")
+      $("#loginbutton").css("display", "none");
+      $("#logoutbutton").css("display", "flex");
+      $("#yourRecipesLink").css("display", "flex");
     })
     .catch((error) => {
       var errorCode = error.code;
@@ -75,6 +81,7 @@ function login() {
     });
 }
 
+//this function happens when the logout button is clicked
 function signOut() {
   console.log("signout button has been clicked");
   firebase
@@ -83,18 +90,17 @@ function signOut() {
     .then(() => {
       // Sign-out successful.
       console.log("signed out");
+      alert("you are signed out")
+      $("#loginbutton").css("display", "none");
+      $("#logoutbutton").css("display", "flex");
+      $("#yourRecipesLink").css("display", "flex");
     })
     .catch((error) => {
       // An error happened.
       console.log(error);
     });
-  //this gets rid of logoutbutton in nav;
-  logoutbutton.style.display = "none";
-  //this adds the loginbutton to the nav
-  loginbutton.style.display = "flex";
-  //this removes yourrecipes from the nav
-  yourRecipesLink.style.display = "none";
 }
+
 //function that gets pageID
 function route() {
   let hashTag = window.location.hash;
