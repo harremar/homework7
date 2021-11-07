@@ -123,11 +123,12 @@ function addIngred() {
     `<input id="ind${ingredCounter}" type="text" placeholder="Ingredient #${ingredCounter} ">`
   );
 }
+var instCounter = 3;
 //ADDS INSTRUCTIONS
 function addInst() {
-  ingredCounter++;
+  instCounter++;
   $(".instructionsForm").append(
-    `<input id="ind${ingredCounter}" type="text" placeholder="Ingredient #${ingredCounter} ">`
+    `<input id="ind${instCounter}" type="text" placeholder="Ingredient #${instCounter} ">`
   );
 }
 
