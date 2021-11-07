@@ -98,13 +98,21 @@ a {
   font-size: 25px;
   color: black;
 }
-.header li a .underline {
+
+.header ul li.active a {
+  height: 60px;
+  padding-bottom: 20px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   border-bottom: black 3px solid;
   width: 100%;
   text-align: center;
+  font-family: caveatB;
+}
+
+.header li a:hover {
+  font-family: caveatB;
 }
 
 .header li {
@@ -116,7 +124,12 @@ a {
           justify-content: space-evenly;
 }
 
-#yourRecipesLink {
+.yourRecipesLink {
+  display: none;
+  color: maroon;
+}
+
+.createRecipesLink {
   display: none;
   color: maroon;
 }
@@ -172,10 +185,7 @@ a {
 #logoutbutton:hover {
   font-family: caveatB;
   display: none;
-}
-
-.header li a:hover {
-  font-family: caveatB;
+  cursor: pointer;
 }
 
 .header .logo {
@@ -770,6 +780,42 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.browse .browse-content .recipes-holder .recipe .pizza .recipeView {
+  background-color: #ffd972;
+  -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  width: 128px;
+  height: 42px;
+  border-radius: 26px;
+  font-family: caveatR;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  color: black;
+}
+.browse .browse-content .recipes-holder .recipe .pizza .recipeView a {
+  text-decoration: none;
+  color: black;
+}
+.browse .browse-content .recipes-holder .recipe .pizza .recipeView:hover {
+  font-family: caveatB;
 }
 .browse .browse-content .recipes-holder .recipe .burger {
   width: 300px;
@@ -779,6 +825,42 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.browse .browse-content .recipes-holder .recipe .burger .recipeView {
+  background-color: #ffd972;
+  -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  width: 128px;
+  height: 42px;
+  border-radius: 26px;
+  font-family: caveatR;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  color: black;
+}
+.browse .browse-content .recipes-holder .recipe .burger .recipeView a {
+  text-decoration: none;
+  color: black;
+}
+.browse .browse-content .recipes-holder .recipe .burger .recipeView:hover {
+  font-family: caveatB;
 }
 .browse .browse-content .recipes-holder .recipe .pilaf {
   width: 300px;
@@ -788,6 +870,42 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.browse .browse-content .recipes-holder .recipe .pilaf .recipeView {
+  background-color: #ffd972;
+  -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  width: 128px;
+  height: 42px;
+  border-radius: 26px;
+  font-family: caveatR;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  color: black;
+}
+.browse .browse-content .recipes-holder .recipe .pilaf .recipeView a {
+  text-decoration: none;
+  color: black;
+}
+.browse .browse-content .recipes-holder .recipe .pilaf .recipeView:hover {
+  font-family: caveatB;
 }
 .browse .browse-content .recipes-holder .recipe .chowmein {
   width: 300px;
@@ -797,6 +915,42 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.browse .browse-content .recipes-holder .recipe .chowmein .recipeView {
+  background-color: #ffd972;
+  -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  width: 128px;
+  height: 42px;
+  border-radius: 26px;
+  font-family: caveatR;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  color: black;
+}
+.browse .browse-content .recipes-holder .recipe .chowmein .recipeView a {
+  text-decoration: none;
+  color: black;
+}
+.browse .browse-content .recipes-holder .recipe .chowmein .recipeView:hover {
+  font-family: caveatB;
 }
 .browse .browse-content .recipes-holder .recipe .text-holder {
   width: 224px;
@@ -1120,7 +1274,7 @@ a {
 }
 .create .create-content {
   width: 88%;
-  min-height: 600px;
+  height: 610px;
   margin: 170px auto 0 auto;
 }
 .create .create-content h2 {
@@ -1198,27 +1352,14 @@ a {
 .create .create-content .input-holder .recipeImage-holder input::placeholder {
   color: black;
 }
-.create .create-content .input-holder .lastInput-holder {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  margin-bottom: 60px;
-  margin-top: 50px;
-  background-color: aqua;
-}
-.create .create-content .input-holder .lastInput-holder .plusBtn {
+.create .create-content .input-holder .plusBtn {
   width: 38px;
   height: 38px;
   background-color: #efa7a7;
   border-radius: 50px;
   position: absolute;
-  right: 80px;
+  right: 0;
+  bottom: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1229,12 +1370,12 @@ a {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
-.create .create-content .input-holder .lastInput-holder .plusBtn a {
+.create .create-content .input-holder .plusBtn a {
   font-family: gillsansR;
   font-size: 20px;
   color: white;
 }
-.create .create-content .input-holder .lastInput-holder input {
+.create .create-content .input-holder .plusBtn input {
   display: block;
   width: 100%;
   height: 60px;
@@ -1248,19 +1389,19 @@ a {
   margin-bottom: 10px;
   color: black;
 }
-.create .create-content .input-holder .lastInput-holder input::-webkit-input-placeholder {
+.create .create-content .input-holder .plusBtn input::-webkit-input-placeholder {
   color: black;
 }
-.create .create-content .input-holder .lastInput-holder input::-moz-placeholder {
+.create .create-content .input-holder .plusBtn input::-moz-placeholder {
   color: black;
 }
-.create .create-content .input-holder .lastInput-holder input:-ms-input-placeholder {
+.create .create-content .input-holder .plusBtn input:-ms-input-placeholder {
   color: black;
 }
-.create .create-content .input-holder .lastInput-holder input::-ms-input-placeholder {
+.create .create-content .input-holder .plusBtn input::-ms-input-placeholder {
   color: black;
 }
-.create .create-content .input-holder .lastInput-holder input::placeholder {
+.create .create-content .input-holder .plusBtn input::placeholder {
   color: black;
 }
 .create .create-content .input-holder input {
@@ -1291,118 +1432,146 @@ a {
 .create .create-content .input-holder input::placeholder {
   color: black;
 }
-.create .create-content2 {
+.create .ingredientForm {
+  margin: 128px auto 0 auto;
   width: 88%;
-  min-height: 300px;
-  margin: 170px auto 0 auto;
+  position: relative;
 }
-.create .create-content2 h2 {
-  font-family: caveatB;
-  font-size: 25px;
-}
-.create .create-content2 p {
+.create .ingredientForm p {
   font-family: latoB;
   font-size: 20px;
 }
-.create .create-content2 .input-holder {
+.create .ingredientForm input {
+  display: block;
   width: 100%;
-  height: 120px;
-  padding-bottom: 50px;
-}
-.create .create-content2 .input-holder .lastInput-holder {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  height: 60px;
+  border: none;
+  border-bottom: black 3px solid;
+  padding-top: 20px;
+  font-size: 20px;
+  font-family: latoL;
+  outline: none;
   margin-bottom: 60px;
-  margin-top: 50px;
+  color: black;
 }
-.create .create-content2 .input-holder .lastInput-holder .plusBtn {
+.create .ingredientForm input::-webkit-input-placeholder {
+  color: black;
+}
+.create .ingredientForm input::-moz-placeholder {
+  color: black;
+}
+.create .ingredientForm input:-ms-input-placeholder {
+  color: black;
+}
+.create .ingredientForm input::-ms-input-placeholder {
+  color: black;
+}
+.create .ingredientForm input::placeholder {
+  color: black;
+}
+.create .instructionsForm {
+  margin: 128px auto 0 auto;
+  width: 88%;
+  position: relative;
+}
+.create .instructionsForm p {
+  font-family: latoB;
+  font-size: 20px;
+}
+.create .instructionsForm input {
+  display: block;
+  width: 100%;
+  height: 60px;
+  border: none;
+  border-bottom: black 3px solid;
+  padding-top: 20px;
+  font-size: 20px;
+  font-family: latoL;
+  outline: none;
+  margin-bottom: 60px;
+  color: black;
+}
+.create .instructionsForm input::-webkit-input-placeholder {
+  color: black;
+}
+.create .instructionsForm input::-moz-placeholder {
+  color: black;
+}
+.create .instructionsForm input:-ms-input-placeholder {
+  color: black;
+}
+.create .instructionsForm input::-ms-input-placeholder {
+  color: black;
+}
+.create .instructionsForm input::placeholder {
+  color: black;
+}
+.create .plusbtn {
+  background-color: #efa7a7;
   width: 38px;
   height: 38px;
-  background-color: #efa7a7;
   border-radius: 50px;
-  position: absolute;
-  right: 7%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  display: flex;
+  align-items: center;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
-.create .create-content2 .input-holder .lastInput-holder .plusBtn a {
+.create .plusbtn a {
   font-family: gillsansR;
   font-size: 20px;
   color: white;
 }
-.create .create-content2 .input-holder .lastInput-holder .plusBtn a:hover {
+.create .plusbtn a:hover {
   font-size: 24px;
 }
-.create .create-content2 .input-holder .lastInput-holder input {
-  display: block;
-  width: 100%;
-  height: 60px;
-  border: none;
-  border-bottom: black 3px solid;
-  padding-top: 20px;
-  margin-bottom: 20px;
+.create .createRecipesCreator {
+  background-color: #efa7a7;
+  width: 422px;
+  height: 52px;
+  margin: 0 auto;
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 20px;
-  font-family: latoL;
-  outline: none;
-  margin-bottom: 10px;
   color: black;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  font-family: caveatR;
 }
-.create .create-content2 .input-holder .lastInput-holder input::-webkit-input-placeholder {
-  color: black;
-}
-.create .create-content2 .input-holder .lastInput-holder input::-moz-placeholder {
-  color: black;
-}
-.create .create-content2 .input-holder .lastInput-holder input:-ms-input-placeholder {
-  color: black;
-}
-.create .create-content2 .input-holder .lastInput-holder input::-ms-input-placeholder {
-  color: black;
-}
-.create .create-content2 .input-holder .lastInput-holder input::placeholder {
-  color: black;
-}
-.create .create-content2 .input-holder input {
-  display: block;
-  width: 100%;
-  height: 60px;
-  border: none;
-  border-bottom: black 3px solid;
-  padding-top: 20px;
+.create .createRecipesCreator a {
+  font-family: caveatR;
   font-size: 20px;
-  font-family: latoL;
-  outline: none;
-  margin-bottom: 60px;
   color: black;
 }
-.create .create-content2 .input-holder input::-webkit-input-placeholder {
-  color: black;
-}
-.create .create-content2 .input-holder input::-moz-placeholder {
-  color: black;
-}
-.create .create-content2 .input-holder input:-ms-input-placeholder {
-  color: black;
-}
-.create .create-content2 .input-holder input::-ms-input-placeholder {
-  color: black;
-}
-.create .create-content2 .input-holder input::placeholder {
-  color: black;
+.create .createRecipesCreator a:hover {
+  font-family: caveatB;
 }
 
 @media (max-width: 768px) {
@@ -1410,8 +1579,14 @@ a {
     min-height: 1736px;
   }
   .create .create-content {
-    height: 400px;
+    height: 500px;
     margin: 150px auto 0 auto;
+  }
+  .create .create-content .input-holder .recipeImage-holder a .abbBtn {
+    width: 200px;
+  }
+  .create .create-content .input-holder .recipeImage-holder input {
+    font-size: 16px;
   }
   .create .create-content h2 {
     text-align: center;
@@ -1431,25 +1606,20 @@ a {
     font-size: 16px;
     margin-bottom: 20px;
   }
-  .create .create-content2 {
-    margin: 50px auto 0 auto;
-  }
-  .create .create-content2 .input-holder .lastInput-holder {
-    margin-bottom: 20px;
-  }
-  .create .create-content2 .input-holder .lastInput-holder input {
+  .create .ingredientForm p {
     font-size: 16px;
-    margin-bottom: 20px;
-    margin-top: -25px;
   }
-  .create .create-content2 .input-holder .lastInput-holder .plusBtn {
-    position: absolute;
-    right: 10%;
-    margin-top: -35px;
-  }
-  .create .create-content2 .input-holder input {
+  .create .ingredientForm input {
     font-size: 16px;
-    margin-bottom: 20px;
+  }
+  .create .instructionsForm p {
+    font-size: 16px;
+  }
+  .create .instructionsForm input {
+    font-size: 16px;
+  }
+  .create .createRecipesCreator {
+    width: 354px;
   }
 }
 @media (max-width: 370px) {
@@ -1476,11 +1646,21 @@ a {
   .create .create-content .input-holder input {
     font-size: 12px;
   }
-  .create .create-content2 .input-holder .lastInput-holder input {
+  .create .ingredientForm p {
     font-size: 12px;
   }
-  .create .create-content2 .input-holder input {
+  .create .ingredientForm input {
     font-size: 12px;
+  }
+  .create .instructionsForm p {
+    font-size: 12px;
+  }
+  .create .instructionsForm input {
+    font-size: 12px;
+  }
+  .create .createRecipesCreator {
+    width: 283px;
+    font-size: 20px;
   }
 }
 .yourRecipes {

@@ -54,6 +54,30 @@
           background-repeat: no-repeat;
           background-size: cover;
           border-radius: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+
+          .recipeView {
+            background-color: #ffd972;
+            box-shadow: 0 10px 6px rgba($color: #000000, $alpha: 0.16);
+            width: 128px;
+            height: 42px;
+            border-radius: 26px;
+            font-family: caveatR;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            color: black;
+            a {
+              text-decoration: none;
+              color: black;
+            }
+          }
+          .recipeView:hover {
+            font-family: caveatB;
+          }
         }
         .burger {
           width: 300px;
@@ -63,6 +87,30 @@
           background-repeat: no-repeat;
           background-size: cover;
           border-radius: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+
+          .recipeView {
+            background-color: #ffd972;
+            box-shadow: 0 10px 6px rgba($color: #000000, $alpha: 0.16);
+            width: 128px;
+            height: 42px;
+            border-radius: 26px;
+            font-family: caveatR;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            color: black;
+            a {
+              text-decoration: none;
+              color: black;
+            }
+          }
+          .recipeView:hover {
+            font-family: caveatB;
+          }
         }
         .pilaf {
           width: 300px;
@@ -72,6 +120,30 @@
           background-repeat: no-repeat;
           background-size: cover;
           border-radius: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+
+          .recipeView {
+            background-color: #ffd972;
+            box-shadow: 0 10px 6px rgba($color: #000000, $alpha: 0.16);
+            width: 128px;
+            height: 42px;
+            border-radius: 26px;
+            font-family: caveatR;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            color: black;
+            a {
+              text-decoration: none;
+              color: black;
+            }
+          }
+          .recipeView:hover {
+            font-family: caveatB;
+          }
         }
         .chowmein {
           width: 300px;
@@ -81,6 +153,30 @@
           background-repeat: no-repeat;
           background-size: cover;
           border-radius: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+
+          .recipeView {
+            background-color: #ffd972;
+            box-shadow: 0 10px 6px rgba($color: #000000, $alpha: 0.16);
+            width: 128px;
+            height: 42px;
+            border-radius: 26px;
+            font-family: caveatR;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            color: black;
+            a {
+              text-decoration: none;
+              color: black;
+            }
+          }
+          .recipeView:hover {
+            font-family: caveatB;
+          }
         }
         .text-holder {
           width: 224px;

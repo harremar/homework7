@@ -5,17 +5,21 @@ function initFirebase() {
       // $(".pName").css("display", "block");
       $("#loginbutton").css("display", "none");
       $("#logoutbutton").css("display", "flex");
-      $("#yourRecipesLink").css("display", "flex");
+      $(".yourRecipesLink").css("display", "flex");
+      $(".createRecipesLink").css("display", "flex");
+      $(".recipeView").css("display", "flex");
     } else {
       console.log("user is not there");
       $("#loginbutton").css("display", "flex");
       $("#logoutbutton").css("display", "none");
-      $("#yourRecipesLink").css("display", "none");
-      // $(".pName").css("display", "none");
+      $(".yourRecipesLink").css("display", "none");
+      $(".createRecipesLink").css("display", "none");
+      $(".recipeView").css("display", "none");
     }
   });
 }
 
+//this function create a new user
 function createUser() {
   console.log("signin was clicked");
   let password = $("#cpassword").val();
@@ -66,9 +70,6 @@ function login() {
       var user = userCredential.user;
       console.log("signed in");
       alert("you have logged in");
-      $("#loginbutton").css("display", "none");
-      $("#logoutbutton").css("display", "flex");
-      $("#yourRecipesLink").css("display", "flex");
     })
     .catch((error) => {
       var errorCode = error.code;
@@ -87,9 +88,6 @@ function signOut() {
       // Sign-out successful.
       console.log("signed out");
       alert("you are signed out");
-      $("#loginbutton").css("display", "none");
-      $("#logoutbutton").css("display", "flex");
-      $("#yourRecipesLink").css("display", "flex");
     })
     .catch((error) => {
       // An error happened.
@@ -105,9 +103,32 @@ function route() {
   //if no pageID go to home
   if (pageID == "") {
     MODEL.getMyContent("home");
+    $(".underline").css("display", "flex");
   } else {
     MODEL.getMyContent(pageID);
+    if (pageID == "home") {
+      $(".underline").css("display", "flex");
+    }
+    if (pageID == "browse") {
+      $(".underline2").css("display", "flex");
+    }
   }
+}
+
+var ingredCounter = 3;
+//ADDS INGREDIENTS
+function addIngred() {
+  ingredCounter++;
+  $(".ingredientForm").append(
+    `<input id="ind${ingredCounter}" type="text" placeholder="Ingredient #${ingredCounter} ">`
+  );
+}
+//ADDS INSTRUCTIONS
+function addInst() {
+  ingredCounter++;
+  $(".instructionsForm").append(
+    `<input id="ind${ingredCounter}" type="text" placeholder="Ingredient #${ingredCounter} ">`
+  );
 }
 
 function initListener() {
