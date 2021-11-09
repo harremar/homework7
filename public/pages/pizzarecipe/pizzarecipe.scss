@@ -1,4 +1,4 @@
-.pizzarecipe {
+.foodrecipe {
   width: 100%;
   height: 1542px;
 
@@ -33,7 +33,16 @@
           top: 150px;
         }
       }
-      .image-holder {
+      .image-pizza {
+        width: 468px;
+        height: 100%;
+        background-color: lightpink;
+        background-image: url(../images/recipe-pizza.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .image-burger {
         width: 468px;
         height: 100%;
         background-color: lightpink;

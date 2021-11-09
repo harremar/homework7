@@ -1,3 +1,4 @@
+let browseName = document.getElementById("browseName");
 function initFirebase() {
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
@@ -7,14 +8,16 @@ function initFirebase() {
       $("#logoutbutton").css("display", "flex");
       $(".yourRecipesLink").css("display", "flex");
       $(".createRecipesLink").css("display", "flex");
-      $(".recipeView").css("display", "flex");
+      $(".browseName").css("innerHTML", "Browse All");
+      browseName.innerHTML = "Browse All";
+      // $(".recipeView").css("display", "flex");
     } else {
       console.log("user is not there");
       $("#loginbutton").css("display", "flex");
       $("#logoutbutton").css("display", "none");
       $(".yourRecipesLink").css("display", "none");
       $(".createRecipesLink").css("display", "none");
-      $(".recipeView").css("display", "none");
+      browseName.innerHTML = "Browse";
     }
   });
 }
@@ -95,6 +98,12 @@ function signOut() {
     });
 }
 
+function underline(pageID) {
+  $("ul li").click(function () {
+    console.log("clicked");
+    $("ul li").addClass("active");
+  });
+}
 //function that gets pageID
 function route() {
   let hashTag = window.location.hash;
@@ -103,16 +112,11 @@ function route() {
   //if no pageID go to home
   if (pageID == "") {
     MODEL.getMyContent("home");
-    $(".underline").css("display", "flex");
+    // $(".underline").css("display", "flex");
   } else {
     MODEL.getMyContent(pageID);
-    if (pageID == "home") {
-      $(".underline").css("display", "flex");
-    }
-    if (pageID == "browse") {
-      $(".underline2").css("display", "flex");
-    }
   }
+  underline(pageID);
 }
 
 var ingredCounter = 3;
@@ -128,7 +132,7 @@ var instCounter = 3;
 function addInst() {
   instCounter++;
   $(".instructionsForm").append(
-    `<input id="ind${instCounter}" type="text" placeholder="Ingredient #${instCounter} ">`
+    `<input id="ind${instCounter}" type="text" placeholder="Instructions #${instCounter} ">`
   );
 }
 

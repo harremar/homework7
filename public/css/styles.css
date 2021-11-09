@@ -790,33 +790,6 @@ a {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
-.browse .browse-content .recipes-holder .recipe .pizza .recipeView {
-  background-color: #ffd972;
-  -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
-  width: 128px;
-  height: 42px;
-  border-radius: 26px;
-  font-family: caveatR;
-  font-size: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  color: black;
-}
-.browse .browse-content .recipes-holder .recipe .pizza .recipeView a {
-  text-decoration: none;
-  color: black;
-}
-.browse .browse-content .recipes-holder .recipe .pizza .recipeView:hover {
-  font-family: caveatB;
-}
 .browse .browse-content .recipes-holder .recipe .burger {
   width: 300px;
   height: 263px;
@@ -1934,11 +1907,11 @@ a {
     font-size: 18px;
   }
 }
-.pizzarecipe {
+.foodrecipe {
   width: 100%;
   height: 1542px;
 }
-.pizzarecipe .top-section {
+.foodrecipe .top-section {
   width: 1012px;
   height: 421px;
   margin: 240px auto 0 auto;
@@ -1952,7 +1925,7 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.pizzarecipe .top-section .right-content {
+.foodrecipe .top-section .right-content {
   width: 512px;
   height: 421px;
   display: -webkit-box;
@@ -1965,11 +1938,11 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.pizzarecipe .top-section .right-content .title {
+.foodrecipe .top-section .right-content .title {
   width: 44px;
   height: 100%;
 }
-.pizzarecipe .top-section .right-content .title h1 {
+.foodrecipe .top-section .right-content .title h1 {
   font-size: 25px;
   font-family: latoB;
   position: relative;
@@ -1979,7 +1952,7 @@ a {
   left: -75px;
   top: 150px;
 }
-.pizzarecipe .top-section .right-content .image-holder {
+.foodrecipe .top-section .right-content .image-pizza {
   width: 468px;
   height: 100%;
   background-color: lightpink;
@@ -1988,44 +1961,53 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.pizzarecipe .top-section .left-content {
+.foodrecipe .top-section .right-content .image-burger {
+  width: 468px;
+  height: 100%;
+  background-color: lightpink;
+  background-image: url(../images/recipe-pizza.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.foodrecipe .top-section .left-content {
   width: 455px;
   height: 421px;
 }
-.pizzarecipe .top-section .left-content h2 {
+.foodrecipe .top-section .left-content h2 {
   font-family: latoB;
   font-size: 25px;
   padding-bottom: 25px;
 }
-.pizzarecipe .top-section .left-content h3 {
+.foodrecipe .top-section .left-content h3 {
   font-family: latoB;
   font-size: 20px;
   padding-bottom: 25px;
 }
-.pizzarecipe .top-section .left-content p {
+.foodrecipe .top-section .left-content p {
   font-family: caveatR;
   font-size: 20px;
   padding-bottom: 25px;
 }
-.pizzarecipe .bottom-section {
+.foodrecipe .bottom-section {
   width: 1012px;
   height: 700px;
   margin: 60px auto 0 auto;
 }
-.pizzarecipe .bottom-section .info {
+.foodrecipe .bottom-section .info {
   min-height: 300px;
   margin-bottom: 60px;
   width: 100%;
 }
-.pizzarecipe .bottom-section .info h1 {
+.foodrecipe .bottom-section .info h1 {
   font-size: 25px;
   font-family: latoB;
 }
-.pizzarecipe .bottom-section .info p {
+.foodrecipe .bottom-section .info p {
   font-size: 20px;
   font-family: caveatR;
 }
-.pizzarecipe .bottom-section .btn {
+.foodrecipe .bottom-section .btn {
   width: 128px;
   height: 42px;
   border-radius: 26px;
@@ -2046,6 +2028,6 @@ a {
   color: black;
   text-align: center;
 }
-.pizzarecipe .bottom-section .btn:hover {
+.foodrecipe .bottom-section .btn:hover {
   font-family: caveatB;
 }
