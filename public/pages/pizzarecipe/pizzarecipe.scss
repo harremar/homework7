@@ -1,6 +1,8 @@
 .foodrecipe {
   width: 100%;
-  height: 1542px;
+  min-height: 1542px;
+  margin-bottom: 500px;
+  // background-color: palegreen;
 
   .top-section {
     width: 1012px;
@@ -13,7 +15,7 @@
     .right-content {
       width: 512px;
       height: 421px;
-      //   background-color: red;
+      // background-color: red;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -24,8 +26,8 @@
 
         h1 {
           font-size: 25px;
-          font-family: latoB;
-          //   background-color: mediumblue;
+          font-family: latoR;
+          // background-color: mediumblue;
           position: relative;
           transform: rotate(-90deg);
           min-width: 190px;
@@ -36,7 +38,7 @@
       .image-pizza {
         width: 468px;
         height: 100%;
-        background-color: lightpink;
+        // background-color: lightpink;
         background-image: url(../images/recipe-pizza.jpg);
         background-position: center;
         background-repeat: no-repeat;
@@ -46,7 +48,25 @@
         width: 468px;
         height: 100%;
         background-color: lightpink;
-        background-image: url(../images/recipe-pizza.jpg);
+        background-image: url(../images/recipe-burger.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .image-pilaf {
+        width: 468px;
+        height: 100%;
+        background-color: lightpink;
+        background-image: url(../images/recipe-pilaf.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .image-chowmein {
+        width: 468px;
+        height: 100%;
+        background-color: lightpink;
+        background-image: url(../images/recipe-chowmein.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -55,14 +75,14 @@
     .left-content {
       width: 455px;
       height: 421px;
-      //   background-color: magenta;
+      // background-color: magenta;
       h2 {
-        font-family: latoB;
+        font-family: latoR;
         font-size: 25px;
         padding-bottom: 25px;
       }
       h3 {
-        font-family: latoB;
+        font-family: latoR;
         font-size: 20px;
         padding-bottom: 25px;
       }
@@ -76,39 +96,160 @@
 
   .bottom-section {
     width: 1012px;
-    height: 700px;
+    min-height: 700px;
     // background-color: fuchsia;
-    margin: 60px auto 0 auto;
+    margin: 60px auto;
     .info {
       min-height: 300px;
       margin-bottom: 60px;
       width: 100%;
-      //   background-color: gold;
+      // background-color: gold;
       h1 {
         font-size: 25px;
-        font-family: latoB;
+        font-family: latoR;
       }
       p {
         font-size: 20px;
         font-family: caveatR;
       }
     }
-    .btn {
-      width: 128px;
-      height: 42px;
-      border-radius: 26px;
-      background-color: #ffd972;
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      box-shadow: 0 10px 6px rgba($color: #000000, $alpha: 0.16);
-      font-size: 20px;
-      font-family: caveatR;
-      color: black;
-      text-align: center;
+    .dvEdit {
+      // background-color: red;
+      width: 100%;
+      height: 50px;
+      display: none;
+      // align-items: center;
+      // justify-content: space-evenly;
+      // margin-bottom: 100px;
+      .btn {
+        width: 128px;
+        height: 42px;
+        border-radius: 26px;
+        background-color: #ffd972;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        box-shadow: 0 10px 6px rgba($color: #000000, $alpha: 0.16);
+        font-size: 20px;
+        font-family: caveatR;
+        color: black;
+        text-align: center;
+        // margin-bottom: 50px;
+      }
+      .btn:hover {
+        font-family: caveatB;
+      }
     }
-    .btn:hover {
-      font-family: caveatB;
+  }
+}
+
+@media (max-width: 768px) {
+  .foodrecipe {
+    min-height: 1500px;
+    padding-bottom: 70px;
+    // background-color: aqua;
+    .top-section {
+      height: 935px;
+      flex-direction: column;
+      width: 100%;
+      .right-content {
+        // width: 100%;
+        margin: 0 auto;
+      }
+      .left-content {
+        width: 470px;
+        margin: 0 auto;
+      }
+    }
+    .bottom-section {
+      width: 100%;
+      .info {
+        width: 470px;
+        margin: 0 auto;
+      }
+      .dvEdit {
+        width: 470px;
+        margin: 50px auto;
+      }
+    }
+  }
+}
+@media (max-width: 360px) {
+  .foodrecipe {
+    .top-section {
+      height: 650px;
+      flex-direction: column;
+      width: 100%;
+      margin: 150px auto 0 auto;
+      .right-content {
+        width: 310px;
+        height: 230px;
+        // margin: 0 auto 50px auto;
+        .title {
+          // padding-left: 50px;
+          // margin-left: 40px;
+          h1 {
+            font-size: 20px;
+            margin-top: -30px;
+          }
+        }
+        .image-pizza {
+          width: 251px;
+          height: 225px;
+          margin: 0 auto;
+        }
+        .image-burger {
+          width: 251px;
+          height: 225px;
+          margin: 0 auto;
+        }
+        .image-pilaf {
+          width: 251px;
+          height: 225px;
+          margin: 0 auto;
+        }
+        .image-chowmein {
+          width: 251px;
+          height: 225px;
+          margin: 0 auto;
+        }
+      }
+      .left-content {
+        width: 290px;
+        margin-bottom: 60px;
+        margin-top: 30px;
+        h2 {
+          font-size: 20px;
+          padding-bottom: 15px;
+        }
+        h3 {
+          font-size: 20px;
+          padding-bottom: 15px;
+        }
+        p {
+          font-size: 16px;
+          padding-bottom: 15px;
+        }
+      }
+    }
+    .bottom-section {
+      width: 100%;
+      margin-top: 0px;
+      .info {
+        width: 280px;
+        margin: 0 auto;
+        padding-bottom: 20px;
+        h1 {
+          font-size: 20px;
+        }
+        p {
+          font-size: 16px;
+        }
+      }
+      .dvEdit {
+        width: 280px;
+        margin-top: 30px;
+      }
     }
   }
 }

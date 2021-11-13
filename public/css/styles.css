@@ -755,6 +755,13 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -771,6 +778,7 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 50px;
 }
 .browse .browse-content .recipes-holder .recipe .pizza {
   width: 300px;
@@ -1250,7 +1258,11 @@ a {
   height: 610px;
   margin: 170px auto 0 auto;
 }
-.create .create-content h2 {
+.create .create-content .createName h2 {
+  font-family: caveatB;
+  font-size: 25px;
+}
+.create .create-content .editName h2 {
   font-family: caveatB;
   font-size: 25px;
 }
@@ -1664,7 +1676,7 @@ a {
   height: 50px;
   margin-bottom: 30px;
 }
-.yourRecipes .yourRecipes-content .headerPage h2 {
+.yourRecipes .yourRecipes-content .headerPage .yourName h2 {
   font-size: 25px;
   font-family: caveatB;
 }
@@ -1909,7 +1921,8 @@ a {
 }
 .foodrecipe {
   width: 100%;
-  height: 1542px;
+  min-height: 1542px;
+  margin-bottom: 500px;
 }
 .foodrecipe .top-section {
   width: 1012px;
@@ -1944,7 +1957,7 @@ a {
 }
 .foodrecipe .top-section .right-content .title h1 {
   font-size: 25px;
-  font-family: latoB;
+  font-family: latoR;
   position: relative;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
@@ -1955,7 +1968,6 @@ a {
 .foodrecipe .top-section .right-content .image-pizza {
   width: 468px;
   height: 100%;
-  background-color: lightpink;
   background-image: url(../images/recipe-pizza.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -1965,7 +1977,25 @@ a {
   width: 468px;
   height: 100%;
   background-color: lightpink;
-  background-image: url(../images/recipe-pizza.jpg);
+  background-image: url(../images/recipe-burger.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.foodrecipe .top-section .right-content .image-pilaf {
+  width: 468px;
+  height: 100%;
+  background-color: lightpink;
+  background-image: url(../images/recipe-pilaf.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.foodrecipe .top-section .right-content .image-chowmein {
+  width: 468px;
+  height: 100%;
+  background-color: lightpink;
+  background-image: url(../images/recipe-chowmein.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1975,12 +2005,12 @@ a {
   height: 421px;
 }
 .foodrecipe .top-section .left-content h2 {
-  font-family: latoB;
+  font-family: latoR;
   font-size: 25px;
   padding-bottom: 25px;
 }
 .foodrecipe .top-section .left-content h3 {
-  font-family: latoB;
+  font-family: latoR;
   font-size: 20px;
   padding-bottom: 25px;
 }
@@ -1991,8 +2021,8 @@ a {
 }
 .foodrecipe .bottom-section {
   width: 1012px;
-  height: 700px;
-  margin: 60px auto 0 auto;
+  min-height: 700px;
+  margin: 60px auto;
 }
 .foodrecipe .bottom-section .info {
   min-height: 300px;
@@ -2001,13 +2031,18 @@ a {
 }
 .foodrecipe .bottom-section .info h1 {
   font-size: 25px;
-  font-family: latoB;
+  font-family: latoR;
 }
 .foodrecipe .bottom-section .info p {
   font-size: 20px;
   font-family: caveatR;
 }
-.foodrecipe .bottom-section .btn {
+.foodrecipe .bottom-section .dvEdit {
+  width: 100%;
+  height: 50px;
+  display: none;
+}
+.foodrecipe .bottom-section .dvEdit .btn {
   width: 128px;
   height: 42px;
   border-radius: 26px;
@@ -2028,6 +2063,114 @@ a {
   color: black;
   text-align: center;
 }
-.foodrecipe .bottom-section .btn:hover {
+.foodrecipe .bottom-section .dvEdit .btn:hover {
   font-family: caveatB;
+}
+
+@media (max-width: 768px) {
+  .foodrecipe {
+    min-height: 1500px;
+    padding-bottom: 70px;
+  }
+  .foodrecipe .top-section {
+    height: 935px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .foodrecipe .top-section .right-content {
+    margin: 0 auto;
+  }
+  .foodrecipe .top-section .left-content {
+    width: 470px;
+    margin: 0 auto;
+  }
+  .foodrecipe .bottom-section {
+    width: 100%;
+  }
+  .foodrecipe .bottom-section .info {
+    width: 470px;
+    margin: 0 auto;
+  }
+  .foodrecipe .bottom-section .dvEdit {
+    width: 470px;
+    margin: 50px auto;
+  }
+}
+@media (max-width: 360px) {
+  .foodrecipe .top-section {
+    height: 650px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    margin: 150px auto 0 auto;
+  }
+  .foodrecipe .top-section .right-content {
+    width: 310px;
+    height: 230px;
+  }
+  .foodrecipe .top-section .right-content .title h1 {
+    font-size: 20px;
+    margin-top: -30px;
+  }
+  .foodrecipe .top-section .right-content .image-pizza {
+    width: 251px;
+    height: 225px;
+    margin: 0 auto;
+  }
+  .foodrecipe .top-section .right-content .image-burger {
+    width: 251px;
+    height: 225px;
+    margin: 0 auto;
+  }
+  .foodrecipe .top-section .right-content .image-pilaf {
+    width: 251px;
+    height: 225px;
+    margin: 0 auto;
+  }
+  .foodrecipe .top-section .right-content .image-chowmein {
+    width: 251px;
+    height: 225px;
+    margin: 0 auto;
+  }
+  .foodrecipe .top-section .left-content {
+    width: 290px;
+    margin-bottom: 60px;
+    margin-top: 30px;
+  }
+  .foodrecipe .top-section .left-content h2 {
+    font-size: 20px;
+    padding-bottom: 15px;
+  }
+  .foodrecipe .top-section .left-content h3 {
+    font-size: 20px;
+    padding-bottom: 15px;
+  }
+  .foodrecipe .top-section .left-content p {
+    font-size: 16px;
+    padding-bottom: 15px;
+  }
+  .foodrecipe .bottom-section {
+    width: 100%;
+    margin-top: 0px;
+  }
+  .foodrecipe .bottom-section .info {
+    width: 280px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
+  .foodrecipe .bottom-section .info h1 {
+    font-size: 20px;
+  }
+  .foodrecipe .bottom-section .info p {
+    font-size: 16px;
+  }
+  .foodrecipe .bottom-section .dvEdit {
+    width: 280px;
+    margin-top: 30px;
+  }
 }

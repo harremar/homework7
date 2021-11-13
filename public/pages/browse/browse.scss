@@ -35,8 +35,11 @@
       min-height: 310px;
       // background-color: blue;
       display: flex;
-      // align-items: center;
+      // float: left;
+      flex-flow: row wrap;
+      align-items: center;
       justify-content: space-between;
+      // flex-direction: column;
 
       .recipe {
         width: 525px;
@@ -45,6 +48,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin-bottom: 50px;
 
         .pizza {
           width: 300px;

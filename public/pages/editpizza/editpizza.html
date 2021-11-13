@@ -1,1 +1,41 @@
-this is edit pizza page
+<div class="create">
+    <div class="create-content">
+        <div class="editName">
+            <h2></h2>
+        </div>
+        <div class="input-holder">
+            <div class="recipeImage-holder">
+                <input type="text" placeholder="Add Recipe Image" maxlength="30">
+               
+                    <a href="#"><div class="addBtn">Attach file</div></a>
+            
+            </div>
+            <input type="text" placeholder="Recipe Name" maxlength="30">
+            <input type="text" placeholder="Recipe Description" maxlength="30">
+            <input type="text" placeholder="Recipe Total Time" maxlength="30">
+            <input type="text" placeholder="Recipe Serving Size" maxlength="30">
+        </div>
+    </div>
+
+    <div class="ingredientForm">
+        <p>Enter Ingredients</p>
+        <input id="ind1" type="text" placeholder="Ingredient #1">
+        <input id="ind2" type="text" placeholder="Ingredient #2">
+        <input id="ind3" type="text" placeholder="Ingredient #3">
+  
+        <div class="plusbtn" onclick="addIngred()">+</div>
+      </div>
+
+    <div class="instructionsForm">
+        <p>Enter Instructions</p>
+        <input id="inst1" type="text" placeholder="Instructions #1">
+        <input id="inst2" type="text" placeholder="Instructions #2">
+        <input id="inst3" type="text" placeholder="Instructions #3">
+  
+        <div class="plusbtn" onclick="addInst()">+</div>
+      </div>
+
+      <div class="createRecipesCreator" onclick="editRecipe()"><a href="#/yourRecipes">Submit Changes</a></div>
+    
+
+</div>

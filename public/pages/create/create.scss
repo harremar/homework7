@@ -8,9 +8,17 @@
     height: 610px;
     // background-color: yellow;
     margin: 170px auto 0 auto;
-    h2 {
-      font-family: caveatB;
-      font-size: 25px;
+    .createName {
+      h2 {
+        font-family: caveatB;
+        font-size: 25px;
+      }
+    }
+    .editName {
+      h2 {
+        font-family: caveatB;
+        font-size: 25px;
+      }
     }
     .input-holder {
       width: 100%;
