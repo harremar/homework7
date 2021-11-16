@@ -6,9 +6,9 @@
       "description": "Make pizza night super duper out of this world with homemade pizza. This recipe is supreme with vegetables and two types of meat. Yum!",
       "time": "1h 24min",
       "servings": "4 servings",
-      "link": "pizzarecipe",
+      "link": "supremepizza",
       "ingredients": [
-        { "ingredient1": "1/4 batch pizza dough" },
+        { "ingredient": "1/4 batch pizza dough" },
         { "ingredient": "2 tablespoons Last-Minute Pizza Sauce" },
         { "ingredient": "10 slices pepperoni" },
         { "ingredient": "1 cup cooked and crumbled Italian sausage" },
@@ -41,7 +41,7 @@
       "servings": "4 servings",
       "link": "burgerrecipe",
       "ingredients": [
-        { "ingredient1": "1 lb ground beef" },
+        { "ingredient": "1 lb ground beef" },
         { "ingredient": "1/2 cup minced onion" },
         { "ingredient": "1 large egg" },
         { "ingredient": "1 Tbsp Worcestershire" },
@@ -78,7 +78,7 @@
       "servings": "6 servings",
       "link": "pilafrecipe",
       "ingredients": [
-        { "ingredient1": "300g basmati rice" },
+        { "ingredient": "300g basmati rice" },
         { "ingredient": "25g butter" },
         { "ingredient": "1 large onion, finely sliced" },
         { "ingredient": "1 bay leaf" },
@@ -172,6 +172,7 @@
       "description": "HELLOO TEST TEST",
       "time": "1h 24min",
       "servings": "4 servings",
+      "link": "pizzarecipe",
       "ingredients": [
         { "ingredient": "ingredient uno" },
         { "ingredient": "ingredient dos" },
