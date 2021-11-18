@@ -1,20 +1,19 @@
 
-        <div class="create">
+        <div id="recipeForm"  class="create">
             <div class="create-content">
                 <div class="createName"><h2></h2></div>
                 <div class="input-holder">
                     <div class="recipeImage-holder">
                         <input id="recipeImageText" type="text" placeholder="Add Recipe Image" maxlength="30">
-                       
                         <input type="file" id="upload" style="display: none;">
                         <label id="recipeImage"  class="addBtn" for="upload">Attach file</label>
                             
                     
                     </div>
-                    <input id="foodName" type="text" placeholder="Recipe Name" maxlength="30">
-                    <input id="recipeDescription" type="text" placeholder="Recipe Description" maxlength="30">
-                    <input id="recipeTime" type="text" placeholder="Recipe Total Time" maxlength="30">
-                    <input id="recipeServing" type="text" placeholder="Recipe Serving Size" maxlength="30">
+                    <input id="recipeInput" type="text" placeholder="Recipe Name" maxlength="30">
+                    <input id="descriptionInput" type="text" placeholder="Recipe Description" maxlength="30">
+                    <input id="timeInput" type="text" placeholder="Recipe Total Time" maxlength="30">
+                    <input id="servingInput" type="text" placeholder="Recipe Serving Size" maxlength="30">
                 </div>
             </div>
 
@@ -37,6 +36,6 @@
               </div>
 
               <div class="createRecipesCreator" onclick="createRecipe()"><a href="#/yourRecipes">Create Recipes</a></div>
-            
+    
 
         </div>

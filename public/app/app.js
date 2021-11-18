@@ -309,32 +309,161 @@ function signOut() {
     });
 }
 
-function createRecipe() {
-  alert("You have created a new recipe");
-  console.log("Create Recipe button was clicked");
-  let recipeImageText = $("#recipeImageText").val();
-  let recipeImage = $("#recipeImage").val();
-  let foodName = $("#foodName").val();
-  let recipeDescription = $("#recipeDescription").val();
-  let recipeTime = $("#recipeTime").val();
-  let recipeServing = $("#recipeServing").val();
+document.addEventListener("DOMContentLoaded", function () {
+  const recipeForm = document.querySelector("#recipeForm");
+  const recipeURL = `http://localhost:5000/#/browse`;
+  fetch(`${"recipeURL"}`)
+    .then((response) => response.json())
+    .then((recipeData) =>
+      recipeData.foreach(function (recipe) {
+        recipeForm.innerHTML += `<div class="foodrecipe">
+        <div class="top-section">
+            <div class="right-content">
+                <div class="title"><h1>${recipe.recipeName}</h1></div>
+                <div class="image-${recipe.image}"></div>
+            </div>
+            <div class="left-content">
+                <h2>Description:</h2>
+                <p>${recipe.description}</p>
+                <h3>Total time:</h3>
+                <p>${recipe.time}</p>
+                <h3>Servings:</h3>
+                <p>${recipe.servings}</p>
+            </div>
+        </div>
+        <div class="bottom-section">
+            <div class="info">
+                <h1>Ingredients:</h1>`;
+        $.each(recipe.ingredients, function (index, ingredient) {
+          console.log("ingred ", ingredient);
+          recipeHTMLString += `<p>${ingredient.ingredient}</p>`;
+        });
 
+        recipeHTMLString += `</div><div class="info">
+              <h1>Instructions:</h1>`;
+        $.each(recipe.instructions, function (index3, instruction) {
+          let n = index3++;
+          recipeHTMLString += `<p>${instruction.instruction}</p>`;
+        });
+        recipeHTMLString += `</div>
+                 <div class="dvEdit">
+                     <a href="#/editpizza"><div class="btn">
+                         Edit Recipe</div></a>
+                 </div></div>`;
+      })
+    ); //end of fetch
+});
+recipeForm.addEventListener("submit", (e) => {
+  event.preventDefault();
+  console.log(e.target);
+  // additional functionality goes down here!!
+  const recipeInput = recipeForm.querySelector("#recipeInput").value;
+  const descriptionInput = recipeForm.querySelector("#descriptionInput").value;
+  const timeInput = recipeForm.querySelector("#timeInput").value;
+  const servingInput = recipeForm.querySelector("#servingInput").value;
   for (i = 1; i < ingredCounter + 1; i++) {
-    let ind = $("#ind" + i).val();
-    console.log("ingredient #", i, " ", ind);
+    const ingredientInput = recipeForm.querySelector("#ind" + i).value;
   }
   for (i = 1; i < instCounter + 1; i++) {
-    let inst = $("#inst" + i).val();
-    console.log("instruction #", i, " ", inst);
+    const instructionInput = recipeForm.querySelector("#inst" + i).value;
   }
+  fetch(`${recipeURL}`, {
+    method: "POST",
+    body: JSON.stringify({
+      title: titleInput,
+      image: imageInput,
+      description: descriptionInput,
+      time: timeInput,
+      servings: servingInput,
+      ingredients: [{ ingredients: ingredientInput }],
+      instructions: [{ instruction: instructionInput }],
+    }),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((response) => response.json())
+    .then((recipe) => {
+      let recipeHTMLString = `<div class="foodrecipe">
+    <div class="top-section">
+        <div class="right-content">
+            <div class="title"><h1>${recipe.recipeName}</h1></div>
+            <div class="image-${recipe.image}"></div>
+        </div>
+        <div class="left-content">
+            <h2>Description:</h2>
+            <p>${recipe.description}</p>
+            <h3>Total time:</h3>
+            <p>${recipe.time}</p>
+            <h3>Servings:</h3>
+            <p>${recipe.servings}</p>
+        </div>
+    </div>
+    <div class="bottom-section">
+        <div class="info">
+            <h1>Ingredients:</h1>`;
+      $.each(recipe.ingredients, function (index, ingredient) {
+        console.log("ingred ", ingredient);
+        recipeHTMLString += `<p>${ingredient.ingredient}</p>`;
+      });
 
-  console.log("Recipe Image: ", recipeImageText);
-  console.log("Recipe Image: ", recipeImage);
-  console.log("Name: ", foodName);
-  console.log("Description: ", recipeDescription);
-  console.log("Time: ", recipeTime);
-  console.log("Serving: ", recipeServing);
-}
+      recipeHTMLString += `</div><div class="info">
+          <h1>Instructions:</h1>`;
+      $.each(recipe.instructions, function (index3, instruction) {
+        let n = index3++;
+        recipeHTMLString += `<p>${instruction.instruction}</p>`;
+      });
+      recipeHTMLString += `</div>
+             <div class="dvEdit">
+                 <a href="#/editpizza"><div class="btn">
+                     Edit Recipe</div></a>
+             </div></div>`;
+      $("#app").html(recipeHTMLString);
+    });
+});
+//   // everything else we type will go inside this!!
+// function createRecipe() {
+//   // const recipeForm = document.querySelector("#recipeForm");
+//   console.log("This is the form: ", recipeForm);
+//   alert("You have created a new recipe");
+//   console.log("Create Recipe button was clicked");
+//   let recipeImageText = $("#recipeImageText").val();
+//   let recipeImage = $("#recipeImage").val();
+//   let foodName = $("#recipeName").val();
+//   let recipeDescription = $("#recipeDescription").val();
+//   let recipeTime = $("#recipeTime").val();
+//   let recipeServing = $("#recipeServing").val();
+
+//   for (i = 1; i < ingredCounter + 1; i++) {
+//     let ind = $("#ind" + i).val();
+//     console.log("ingredient #", i, " ", ind);
+//   }
+//   for (i = 1; i < instCounter + 1; i++) {
+//     let inst = $("#inst" + i).val();
+//     console.log("instruction #", i, " ", inst);
+//   }
+
+//   console.log("Recipe Image: ", recipeImageText);
+//   console.log("Recipe Image: ", recipeImage);
+//   console.log("Name: ", foodName);
+//   console.log("Description: ", recipeDescription);
+//   console.log("Time: ", recipeTime);
+//   console.log("Serving: ", recipeServing);
+
+//   fetch(`${USER_RECIPES}`, {
+//     method: "POST",
+//     body: JSON.stringify({
+//       recipeName: foodName,
+//       image: recipeImage,
+//       description: recipeDescription,
+//       time: recipeTime,
+//       servings: recipeServing,
+//       ingredients: [{ ingredient: ind }],
+//       instructions: [{ instruction: inst }],
+//     }),
+//     headers: { "Content-Type": "data/data.json" },
+//   });
+// }
 
 function editRecipe() {
   alert("You have updated your recipe");
