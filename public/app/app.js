@@ -149,7 +149,7 @@ function loadUserRecipe() {
   $.getJSON("http://localhost:3000/USER_RECIPES", function (recipes) {
     console.log(recipes);
     $(".recipes-holder").empty();
-    $(".yourRecipes-holder").empty();
+    $(".yourRecipes-content").empty();
 
     $.each(recipes, function (index, recipe) {
       console.log(recipe.recipeName);
@@ -186,32 +186,43 @@ function loadUserRecipe() {
       `);
 
       //FOR THE YOUR RECIPES PAGE
-      $(".yourRecipes-holder").append(`
-      <div class="recipe">
-                        <div class="${recipe.image}">
-                            <a href="#/private/${index}"><div class="viewbtn">View</div></a>
-                        </div>
-                        <div class="text-holder">
-                            <div class="title">
-                                <h1>${recipe.recipeName}</h1>
+      $(".yourRecipes-content").append(`<div class= "yourRecipeContainer">
+      <div class="yourRecipes-holder">
+                        <div class="recipe">
+                            <div class="${recipe.image}">
+                                <a href="#/private/${index}"><div class="viewbtn">View</div></a>
                             </div>
-                            <div class="text">
-                                <p>${recipe.description}</p>
-                            </div>
-                            <div class="info">
-                                <div class="time"></div>
-                                <div class="words">
-                                    <p>${recipe.time}</p>
+                            <div class="text-holder">
+                                <div class="title">
+                                    <h1>${recipe.recipeName}</h1>
+                                </div>
+                                <div class="text">
+                                    <p>${recipe.description}</p>
+                                </div>
+                                <div class="info">
+                                    <div class="time"></div>
+                                    <div class="words">
+                                        <p>${recipe.time}</p>
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <div class="servings"></div>
+                                    <div class="words">
+                                        <p>${recipe.servings}</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="info">
-                                <div class="servings"></div>
-                                <div class="words">
-                                    <p>${recipe.servings}</p>
-                                </div>
-                            </div>
                         </div>
-                    </div>
+                </div>
+                <div class="mod-holder">
+                    <a href="#/edit">
+                        <div class="modbtn" onclick="editRecipe()" >Edit Recipe</div>
+                    </a>
+                    <a href="#">
+                        <div class="modbtn" onclick="deleteRecipe()">Delete</div>
+                    </a>
+                </div>
+                </div>
       `);
     });
   }).fail(function (jqxhr, textStatus, error) {
@@ -560,7 +571,8 @@ function route() {
     } else if (pageID == "pizzarecipe") {
       // MODEL.getMyContent(pageID, loadPublicRecipes);
     } else if (pageID == "yourRecipes") {
-      MODEL.getMyContent(pageID, loadUserRecipe, updateSiteWithInfo);
+      MODEL.getMyContent(pageID, loadUserRecipe);
+      MODEL.getMyContent(pageID, updateSiteWithInfo);
     } else if (pageID == "create") {
       MODEL.getMyContent(pageID, updateSiteWithInfo);
     } else if (pageID == "editpizza") {

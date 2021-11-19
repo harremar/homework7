@@ -60,9 +60,10 @@
     .yourRecipes-holder {
       width: 100%;
       min-height: 310px;
-      // background-color: blue;
+      background-color: blue;
       display: flex;
-      // align-items: center;
+      flex-flow: row wrap;
+      align-items: center;
       justify-content: space-between;
 
       .recipe {

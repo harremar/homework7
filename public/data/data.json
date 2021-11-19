@@ -260,7 +260,7 @@
     {
       "id": 1637288496963,
       "recipeName": "Cheese Pizza",
-      "image": "pizza",
+      "image": "cheesepizza",
       "description": "Just a classic cheese pizza!",
       "time": "20 min",
       "servings": "2 servings"
@@ -268,9 +268,17 @@
     {
       "id": 1637288766428,
       "recipeName": "classic burger",
-      "image": "burger",
+      "image": "classicburger",
       "description": "just a classic burger",
       "time": "35 min",
+      "servings": "4 servings"
+    },
+    {
+      "id": 1637289229476,
+      "recipeName": "Veggie burger",
+      "image": "veggieburger",
+      "description": "something more healthy",
+      "time": "30 min",
       "servings": "4 servings"
     }
   ]

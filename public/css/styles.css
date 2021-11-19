@@ -103,8 +103,8 @@ a {
   height: 60px;
   padding-bottom: 20px;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   border-bottom: black 3px solid;
   width: 100%;
   text-align: center;
@@ -120,8 +120,8 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
 }
 
 .yourRecipesLink {
@@ -143,13 +143,13 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
   margin: 0 auto 0 auto;
   color: black;
   font-size: 25px;
@@ -168,13 +168,13 @@ a {
   background-color: #ffd972;
   display: none;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
   margin: 0 auto 0 auto;
   color: black;
   font-size: 25px;
@@ -220,9 +220,9 @@ a {
   top: 50px;
   right: 50px;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   z-index: 1;
   width: 50px;
   height: 50px;
@@ -230,11 +230,11 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
 }
 
 .header .menu-icon .navicon {
@@ -282,12 +282,12 @@ a {
 
 .header .menu-btn:checked ~ .menu-icon .navicon:before {
   -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon:after {
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
@@ -358,11 +358,11 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
 }
 .footer .copyright {
   width: 262px;
@@ -371,11 +371,11 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   margin-top: 20px;
   padding-left: 10px;
 }
@@ -391,11 +391,11 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
 }
 .footer .links a {
   font-size: 15px;
@@ -414,11 +414,11 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding-right: 10px;
 }
 .footer .social-holder .social {
@@ -445,11 +445,11 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
 }
 .footer2 .upper-footer .copyright {
   width: 170px;
@@ -458,11 +458,11 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   padding-top: 30px;
 }
 .footer2 .upper-footer .copyright p {
@@ -477,11 +477,11 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding-right: 10px;
 }
 .footer2 .upper-footer .social-holder .social {
@@ -499,11 +499,11 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   text-align: center;
   margin: 0 auto;
 }
@@ -527,7 +527,7 @@ a {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     padding: 20px;
   }
   .footer .links a {
@@ -535,7 +535,7 @@ a {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     padding: 15px;
   }
 }
@@ -570,8 +570,20 @@ a {
 .home {
   width: 100%;
   height: 100%;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(242, 92, 84, 0.6)), to(rgba(242, 92, 84, 0.6))), url(../images/hero.jpg);
-  background-image: linear-gradient(to right, rgba(242, 92, 84, 0.6), rgba(242, 92, 84, 0.6)), url(../images/hero.jpg);
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(rgba(242, 92, 84, 0.6)),
+      to(rgba(242, 92, 84, 0.6))
+    ),
+    url(../images/hero.jpg);
+  background-image: linear-gradient(
+      to right,
+      rgba(242, 92, 84, 0.6),
+      rgba(242, 92, 84, 0.6)
+    ),
+    url(../images/hero.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -579,11 +591,11 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 .home .circle-holder {
   width: 500px;
@@ -592,11 +604,11 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   position: relative;
 }
 .home .circle-holder .little-circle {
@@ -612,13 +624,13 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
 }
 .home .circle-holder .little-circle p {
   text-align: center;
@@ -636,13 +648,13 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
 }
 .home .circle-holder .big-circle .text-holder {
   width: 170px;
@@ -685,11 +697,11 @@ a {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
   }
   .home .circle-holder .big-circle .text-holder {
     height: 100px;
@@ -700,11 +712,11 @@ a {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
     width: 100%;
     height: 15px;
     padding-top: 20px;
@@ -720,8 +732,20 @@ a {
 .browse {
   width: 100%;
   min-height: 1000px;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(167, 232, 189, 0.8)), to(rgba(167, 232, 189, 0.8))), url(../images/recipe-hero.jpg);
-  background-image: linear-gradient(to right, rgba(167, 232, 189, 0.8), rgba(167, 232, 189, 0.8)), url(../images/recipe-hero.jpg);
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(rgba(167, 232, 189, 0.8)),
+      to(rgba(167, 232, 189, 0.8))
+    ),
+    url(../images/recipe-hero.jpg);
+  background-image: linear-gradient(
+      to right,
+      rgba(167, 232, 189, 0.8),
+      rgba(167, 232, 189, 0.8)
+    ),
+    url(../images/recipe-hero.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -729,11 +753,11 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 .browse .browse-content {
   margin-top: 70px;
@@ -757,14 +781,14 @@ a {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 .browse .browse-content .recipes-holder .recipe {
   width: 525px;
@@ -773,11 +797,11 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin-bottom: 50px;
 }
 .browse .browse-content .recipes-holder .recipe .pizza {
@@ -792,11 +816,65 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+.browse .browse-content .recipes-holder .recipe .veggieburger {
+  width: 300px;
+  height: 263px;
+  background-image: url(../images/recipe-veggieburger.jpg.crdownload);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+.browse .browse-content .recipes-holder .recipe .cheesepizza {
+  width: 300px;
+  height: 263px;
+  background-image: url(../images/recipe-cheesepizza.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+.browse .browse-content .recipes-holder .recipe .classicburger {
+  width: 300px;
+  height: 263px;
+  background-image: url(../images/recipe-classicburger.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
 }
 .browse .browse-content .recipes-holder .recipe .burger {
   width: 300px;
@@ -810,16 +888,16 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
 }
 .browse .browse-content .recipes-holder .recipe .burger .recipeView {
   background-color: #ffd972;
   -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
   width: 128px;
   height: 42px;
   border-radius: 26px;
@@ -829,11 +907,11 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   color: black;
 }
 .browse .browse-content .recipes-holder .recipe .burger .recipeView a {
@@ -855,16 +933,16 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
 }
 .browse .browse-content .recipes-holder .recipe .pilaf .recipeView {
   background-color: #ffd972;
   -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
   width: 128px;
   height: 42px;
   border-radius: 26px;
@@ -874,11 +952,11 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   color: black;
 }
 .browse .browse-content .recipes-holder .recipe .pilaf .recipeView a {
@@ -900,16 +978,16 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
 }
 .browse .browse-content .recipes-holder .recipe .chowmein .recipeView {
   background-color: #ffd972;
   -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
   width: 128px;
   height: 42px;
   border-radius: 26px;
@@ -919,11 +997,11 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   color: black;
 }
 .browse .browse-content .recipes-holder .recipe .chowmein .recipeView a {
@@ -967,11 +1045,11 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
 }
 .browse .browse-content .recipes-holder .recipe .text-holder .info .servings {
   width: 24px;
@@ -1005,8 +1083,8 @@ a {
   .browse .browse-content .recipes-holder {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     min-height: 400px;
   }
   .browse .browse-content .recipes-holder .recipe {
@@ -1024,8 +1102,8 @@ a {
     width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
   .browse .browse-content .recipes-holder .recipe .text-holder {
     width: 298px;
@@ -1085,11 +1163,11 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
 }
 .login .login-content {
   width: 200px;
@@ -1145,13 +1223,13 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
   margin: 50px auto;
   font-family: caveatR;
   font-size: 25px;
@@ -1214,13 +1292,13 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
   margin: 50px auto;
   font-family: caveatR;
   font-size: 25px;
@@ -1237,8 +1315,8 @@ a {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     min-height: 1200px;
   }
   .login .signup-content .input-holder input {
@@ -1276,11 +1354,11 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   margin-bottom: 60px;
   margin-top: 50px;
   cursor: pointer;
@@ -1291,18 +1369,18 @@ a {
   background-color: #efa7a7;
   border-radius: 26px;
   -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
   position: absolute;
   right: 7%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   font-family: caveatR;
   font-size: 17px;
   color: black;
@@ -1315,18 +1393,18 @@ a {
   background-color: #efa7a7;
   border-radius: 26px;
   -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
   position: absolute;
   right: 7%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   font-family: caveatR;
   font-size: 17px;
   color: black;
@@ -1348,16 +1426,32 @@ a {
   outline: none;
   color: black;
 }
-.create .create-content .input-holder .recipeImage-holder input::-webkit-input-placeholder {
+.create
+  .create-content
+  .input-holder
+  .recipeImage-holder
+  input::-webkit-input-placeholder {
   color: black;
 }
-.create .create-content .input-holder .recipeImage-holder input::-moz-placeholder {
+.create
+  .create-content
+  .input-holder
+  .recipeImage-holder
+  input::-moz-placeholder {
   color: black;
 }
-.create .create-content .input-holder .recipeImage-holder input:-ms-input-placeholder {
+.create
+  .create-content
+  .input-holder
+  .recipeImage-holder
+  input:-ms-input-placeholder {
   color: black;
 }
-.create .create-content .input-holder .recipeImage-holder input::-ms-input-placeholder {
+.create
+  .create-content
+  .input-holder
+  .recipeImage-holder
+  input::-ms-input-placeholder {
   color: black;
 }
 .create .create-content .input-holder .recipeImage-holder input::placeholder {
@@ -1375,11 +1469,11 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
 }
 .create .create-content .input-holder .plusBtn a {
   font-family: gillsansR;
@@ -1400,7 +1494,11 @@ a {
   margin-bottom: 10px;
   color: black;
 }
-.create .create-content .input-holder .plusBtn input::-webkit-input-placeholder {
+.create
+  .create-content
+  .input-holder
+  .plusBtn
+  input::-webkit-input-placeholder {
   color: black;
 }
 .create .create-content .input-holder .plusBtn input::-moz-placeholder {
@@ -1526,11 +1624,11 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   font-size: 20px;
   color: white;
   cursor: pointer;
@@ -1540,8 +1638,8 @@ a {
   display: flex;
   align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
 }
 .create .plusbtn a {
   font-family: gillsansR;
@@ -1561,19 +1659,19 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   font-size: 20px;
   color: black;
   cursor: pointer;
   display: flex;
   align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   font-family: caveatR;
 }
 .create .createRecipesCreator a {
@@ -1682,8 +1780,20 @@ a {
 .yourRecipes {
   width: 100%;
   min-height: 1000px;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(167, 232, 189, 0.8)), to(rgba(167, 232, 189, 0.8))), url(../images/recipe-hero.jpg);
-  background-image: linear-gradient(to right, rgba(167, 232, 189, 0.8), rgba(167, 232, 189, 0.8)), url(../images/recipe-hero.jpg);
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(rgba(167, 232, 189, 0.8)),
+      to(rgba(167, 232, 189, 0.8))
+    ),
+    url(../images/recipe-hero.jpg);
+  background-image: linear-gradient(
+      to right,
+      rgba(167, 232, 189, 0.8),
+      rgba(167, 232, 189, 0.8)
+    ),
+    url(../images/recipe-hero.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1691,16 +1801,24 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 .yourRecipes .yourRecipes-content {
-  margin-top: 70px;
+  margin-top: 120px;
+  margin-bottom: 100px;
   width: 90%;
   min-height: 670px;
+  /* background-color: green; */
+  float: left;
+  flex-flow: row wrap;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 .yourRecipes .yourRecipes-content .headerPage {
   width: 100%;
@@ -1712,22 +1830,24 @@ a {
   font-family: caveatB;
 }
 .yourRecipes .yourRecipes-content .mod-holder {
+  /* background-color: pink; */
+  margin-top: -45px;
   width: 300px;
   height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
 }
 .yourRecipes .yourRecipes-content .mod-holder .modbtn {
   background-color: #ffd972;
   -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
   width: 128px;
   height: 42px;
   border-radius: 26px;
@@ -1737,40 +1857,59 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   color: black;
 }
 .yourRecipes .yourRecipes-content .mod-holder .modbtn:hover {
   font-family: caveatB;
 }
-.yourRecipes .yourRecipes-content .yourRecipes-holder {
-  width: 100%;
-  min-height: 310px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.yourRecipes .yourRecipes-content .yourRecipeContainer {
+  flex-flow: row wrap;
+  width: 527px;
+  height: 300px;
+  margin: 50px;
+  /* min-height: 800px; */
+  /* background-color: red; */
+  position: relative;
+  float: left;
 }
-.yourRecipes .yourRecipes-content .yourRecipes-holder .recipe {
+.yourRecipes .yourRecipes-content .yourRecipeContainer .yourRecipes-holder {
+  width: 100%;
+  min-height: 260px;
+  /* float: left; */
+  /* position: relative; */
+  /* flex-flow: row wrap; */
+  /* background-color: blue; */
+}
+.yourRecipes
+  .yourRecipes-content
+  .yourRecipeContainer
+  .yourRecipes-holder
+  .recipe {
   width: 525px;
   min-height: 263px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 50px;
+
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
-.yourRecipes .yourRecipes-content .yourRecipes-holder .recipe .pizza {
+.yourRecipes
+  .yourRecipes-content
+  .yourRecipeContainer
+  .yourRecipes-holder
+  .recipe
+  .pizza {
   width: 300px;
   height: 263px;
   background-image: url(../images/recipe-pizza.jpg);
@@ -1782,16 +1921,25 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
 }
-.yourRecipes .yourRecipes-content .yourRecipes-holder .recipe .pizza .viewbtn {
+
+.yourRecipes
+  .yourRecipes-content
+  .yourRecipeContainer
+  .yourRecipes-holder
+  .recipe
+  .pizza
+  .viewbtn {
   background-color: #ffd972;
+  flex-flow: row wrap;
+
   -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
   width: 128px;
   height: 42px;
   border-radius: 26px;
@@ -1801,14 +1949,226 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   color: black;
 }
-.yourRecipes .yourRecipes-content .yourRecipes-holder .recipe .pizza .viewbtn:hover {
+.yourRecipes
+  .yourRecipes-content
+  .yourRecipeContainer
+  .yourRecipes-holder
+  .recipe
+  .cheesepizza {
+  width: 300px;
+  height: 263px;
+  background-image: url(../images/recipe-cheesepizza.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+
+.yourRecipes
+  .yourRecipes-content
+  .yourRecipeContainer
+  .yourRecipes-holder
+  .recipe
+  .cheesepizza
+  .viewbtn {
+  background-color: #ffd972;
+  flex-flow: row wrap;
+
+  -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  width: 128px;
+  height: 42px;
+  border-radius: 26px;
+  font-family: caveatR;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  color: black;
+}
+.yourRecipes
+  .yourRecipes-content
+  .yourRecipeContainer
+  .yourRecipes-holder
+  .recipe
+  .classicburger {
+  width: 300px;
+  height: 263px;
+  background-image: url(../images/recipe-classicburger.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+.yourRecipes
+  .yourRecipes-content
+  .yourRecipeContainer
+  .yourRecipes-holder
+  .recipe
+  .veggieburger {
+  width: 300px;
+  height: 263px;
+  background-image: url(../images/recipe-veggieburger.jpg.crdownload);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+
+.yourRecipes
+  .yourRecipes-content
+  .yourRecipeContainer
+  .yourRecipes-holder
+  .recipe
+  .veggieburger
+  .viewbtn {
+  background-color: #ffd972;
+  flex-flow: row wrap;
+
+  -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  width: 128px;
+  height: 42px;
+  border-radius: 26px;
+  font-family: caveatR;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  color: black;
+}
+
+.yourRecipes
+  .yourRecipes-content
+  .yourRecipeContainer
+  .yourRecipes-holder
+  .recipe
+  .classicburger
+  .viewbtn {
+  background-color: #ffd972;
+  flex-flow: row wrap;
+
+  -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  width: 128px;
+  height: 42px;
+  border-radius: 26px;
+  font-family: caveatR;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  color: black;
+}
+.yourRecipes
+  .yourRecipes-content
+  .yourRecipeContainer
+  .yourRecipes-holder
+  .recipe
+  .burger {
+  width: 300px;
+  height: 263px;
+  background-image: url(../images/recipe-burger.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+.yourRecipes
+  .yourRecipes-content
+  .yourRecipeContainer
+  .yourRecipes-holder
+  .recipe
+  .burger
+  .viewbtn {
+  background-color: #ffd972;
+  flex-flow: row wrap;
+
+  -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  width: 128px;
+  height: 42px;
+  border-radius: 26px;
+  font-family: caveatR;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  color: black;
+}
+.yourRecipes
+  .yourRecipes-content
+  .yourRecipes-holder
+  .recipe
+  .pizza
+  .viewbtn:hover {
   font-family: caveatB;
 }
 .yourRecipes .yourRecipes-content .yourRecipes-holder .recipe .burger {
@@ -1823,16 +2183,16 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
 }
 .yourRecipes .yourRecipes-content .yourRecipes-holder .recipe .burger .viewbtn {
   background-color: #ffd972;
   -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
   width: 128px;
   height: 42px;
   border-radius: 26px;
@@ -1842,14 +2202,19 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   color: black;
 }
-.yourRecipes .yourRecipes-content .yourRecipes-holder .recipe .burger .viewbtn:hover {
+.yourRecipes
+  .yourRecipes-content
+  .yourRecipes-holder
+  .recipe
+  .burger
+  .viewbtn:hover {
   font-family: caveatB;
 }
 .yourRecipes .yourRecipes-content .yourRecipes-holder .recipe .text-holder {
@@ -1859,26 +2224,53 @@ a {
   border-radius: 24px;
   padding: 40px;
 }
-.yourRecipes .yourRecipes-content .yourRecipes-holder .recipe .text-holder .title {
+.yourRecipes
+  .yourRecipes-content
+  .yourRecipes-holder
+  .recipe
+  .text-holder
+  .title {
   width: 130px;
   height: 20px;
   border-bottom: black 3px solid;
 }
-.yourRecipes .yourRecipes-content .yourRecipes-holder .recipe .text-holder .title h1 {
+.yourRecipes
+  .yourRecipes-content
+  .yourRecipes-holder
+  .recipe
+  .text-holder
+  .title
+  h1 {
   font-family: latoB;
   font-size: 15px;
 }
-.yourRecipes .yourRecipes-content .yourRecipes-holder .recipe .text-holder .text {
+.yourRecipes
+  .yourRecipes-content
+  .yourRecipes-holder
+  .recipe
+  .text-holder
+  .text {
   width: 138px;
   height: 55px;
   margin-top: 20px;
   margin-bottom: 30px;
 }
-.yourRecipes .yourRecipes-content .yourRecipes-holder .recipe .text-holder .text p {
+.yourRecipes
+  .yourRecipes-content
+  .yourRecipes-holder
+  .recipe
+  .text-holder
+  .text
+  p {
   font-size: 9px;
   font-family: latoR;
 }
-.yourRecipes .yourRecipes-content .yourRecipes-holder .recipe .text-holder .info {
+.yourRecipes
+  .yourRecipes-content
+  .yourRecipes-holder
+  .recipe
+  .text-holder
+  .info {
   width: 85px;
   height: 25px;
   margin: 20px auto;
@@ -1886,13 +2278,19 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
 }
-.yourRecipes .yourRecipes-content .yourRecipes-holder .recipe .text-holder .info .servings {
+.yourRecipes
+  .yourRecipes-content
+  .yourRecipes-holder
+  .recipe
+  .text-holder
+  .info
+  .servings {
   width: 24px;
   height: 22px;
   background-image: url(../images/servings.svg);
@@ -1900,7 +2298,13 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.yourRecipes .yourRecipes-content .yourRecipes-holder .recipe .text-holder .info .time {
+.yourRecipes
+  .yourRecipes-content
+  .yourRecipes-holder
+  .recipe
+  .text-holder
+  .info
+  .time {
   width: 24px;
   height: 22px;
   background-image: url(../images/time.svg);
@@ -1908,11 +2312,24 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.yourRecipes .yourRecipes-content .yourRecipes-holder .recipe .text-holder .info .words {
+.yourRecipes
+  .yourRecipes-content
+  .yourRecipes-holder
+  .recipe
+  .text-holder
+  .info
+  .words {
   width: 50px;
   height: 22px;
 }
-.yourRecipes .yourRecipes-content .yourRecipes-holder .recipe .text-holder .info .words p {
+.yourRecipes
+  .yourRecipes-content
+  .yourRecipes-holder
+  .recipe
+  .text-holder
+  .info
+  .words
+  p {
   font-size: 10px;
   font-family: latoR;
 }
@@ -1923,69 +2340,149 @@ a {
   }
   .yourRecipes .yourRecipes-content {
     width: 520px;
-    margin: 0 auto;
+    min-height: 1400px;
+    margin: 150px auto;
+    /* background-color: gold; */
   }
 }
 @media only screen and (max-width: 580px) {
+  .yourRecipes .yourRecipes-content {
+    max-width: 580px;
+  }
   .yourRecipes .yourRecipes-content .headerPage h2 {
     font-size: 20px;
     margin: 0 auto;
     width: 240px;
+    /* background-color: greenyellow; */
   }
-  .yourRecipes .yourRecipes-content .mod-holder {
-    margin: 0 auto;
+  .yourRecipes .yourRecipes-content .yourRecipeContainer .mod-holder {
+    margin: -90px auto;
+    /* background-color: royalblue; */
   }
-  .yourRecipes .yourRecipes-content .mod-holder .modbtn {
+  .yourRecipes .yourRecipes-content .yourRecipeContainer .mod-holder .modbtn {
     width: 142px;
     height: 37px;
     font-size: 17px;
   }
-  .yourRecipes .yourRecipes-content .yourRecipes-holder .recipe {
+  .yourRecipes
+    .yourRecipes-content
+    .yourRecipeContainer
+    .yourRecipes-holder
+    .recipe {
     width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin-top: -20px;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    /* background-color: aquamarine; */
+    margin: 9 auto;
+    height: 400px;
+    padding-bottom: 50px;
   }
   .yourRecipes .yourRecipes-content .yourRecipes-holder .recipe .text-holder {
     width: 298px;
     height: 169px;
+    /* background-color: forestgreen; */
+    padding-bottom: 50px;
+    /* margin: -20px auto; */
   }
-  .yourRecipes .yourRecipes-content .yourRecipes-holder .recipe .text-holder .title {
+  .yourRecipes
+    .yourRecipes-content
+    .yourRecipeContainer
+    .yourRecipes-holder
+    .recipe
+    .text-holder
+    .title {
     width: 86px;
     height: 15px;
     margin: -20px auto 0 auto;
   }
-  .yourRecipes .yourRecipes-content .yourRecipes-holder .recipe .text-holder .title h1 {
+  .yourRecipes
+    .yourRecipes-content
+    .yourRecipes-holder
+    .recipe
+    .text-holder
+    .title
+    h1 {
     font-size: 10px;
   }
-  .yourRecipes .yourRecipes-content .yourRecipes-holder .recipe .text-holder .text {
+  .yourRecipes
+    .yourRecipes-content
+    .yourRecipeContainer
+    .yourRecipes-holder
+    .recipe
+    .text-holder
+    .text {
     width: 153px;
     margin: 10px auto;
   }
-  .yourRecipes .yourRecipes-content .yourRecipes-holder .recipe .text-holder .text p {
+  .yourRecipes
+    .yourRecipes-content
+    .yourRecipeContainer
+    .yourRecipes-holder
+    .recipe
+    .text-holder
+    .text
+    p {
     font-size: 8px;
   }
-  .yourRecipes .yourRecipes-content .yourRecipes-holder .recipe .text-holder .info {
+  .yourRecipes
+    .yourRecipes-content
+    .yourRecipeContainer
+    .yourRecipes-holder
+    .recipe
+    .text-holder
+    .info {
     margin: 0 auto;
   }
-  .yourRecipes .yourRecipes-content .yourRecipes-holder .recipe .text-holder .info .time {
+  .yourRecipes
+    .yourRecipes-content
+    .yourRecipes-holder
+    .recipe
+    .text-holder
+    .info
+    .time {
     width: 23px;
     height: 22px;
   }
-  .yourRecipes .yourRecipes-content .yourRecipes-holder .recipe .text-holder .info .servings {
+  .yourRecipes
+    .yourRecipes-content
+    .yourRecipeContainer
+    .yourRecipes-holder
+    .recipe
+    .text-holder
+    .info
+    .servings {
     width: 23px;
     height: 22px;
   }
-  .yourRecipes .yourRecipes-content .yourRecipes-holder .recipe .text-holder .info .words p {
+  .yourRecipes
+    .yourRecipes-content
+    .yourRecipeContainer
+    .yourRecipes-holder
+    .recipe
+    .text-holder
+    .info
+    .words
+    p {
     font-size: 8px;
   }
-  .yourRecipes .yourRecipes-content .yourRecipes-holder .recipe .pizza {
+  .yourRecipes
+    .yourRecipes-content
+    .yourRecipeContainer
+    .yourRecipes-holder
+    .recipe
+    .pizza {
     width: 298px;
     height: 149px;
   }
-  .yourRecipes .yourRecipes-content .yourRecipes-holder .recipe .pizza .viewbtn {
+  .yourRecipes
+    .yourRecipes-content
+    .yourRecipeContainer
+    .yourRecipes-holder
+    .recipe
+    .pizza
+    .viewbtn {
     width: 145px;
     height: 38px;
     font-size: 18px;
@@ -2004,11 +2501,11 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 .foodrecipe .top-section .right-content {
   width: 512px;
@@ -2017,11 +2514,11 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 .foodrecipe .top-section .right-content .title {
   width: 44px;
@@ -2032,7 +2529,7 @@ a {
   font-family: latoR;
   position: relative;
   -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  transform: rotate(-90deg);
   min-width: 190px;
   left: -75px;
   top: 150px;
@@ -2068,6 +2565,33 @@ a {
   height: 100%;
   background-color: lightpink;
   background-image: url(../images/recipe-chowmein.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.foodrecipe .top-section .right-content .image-cheesepizza {
+  width: 468px;
+  height: 100%;
+  background-color: lightpink;
+  background-image: url(../images/recipe-cheesepizza.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.foodrecipe .top-section .right-content .image-veggieburger {
+  width: 468px;
+  height: 100%;
+  background-color: lightpink;
+  background-image: url(../images/recipe-veggieburger.jpg.crdownload);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.foodrecipe .top-section .right-content .image-classicburger {
+  width: 468px;
+  height: 100%;
+  background-color: lightpink;
+  background-image: url(../images/recipe-classicburger.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2123,13 +2647,13 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
   font-size: 20px;
   font-family: caveatR;
   color: black;
@@ -2148,8 +2672,8 @@ a {
     height: 935px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     width: 100%;
   }
   .foodrecipe .top-section .right-content {
@@ -2176,8 +2700,8 @@ a {
     height: 650px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     width: 100%;
     margin: 150px auto 0 auto;
   }
