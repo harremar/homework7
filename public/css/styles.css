@@ -1283,6 +1283,7 @@ a {
           justify-content: space-evenly;
   margin-bottom: 60px;
   margin-top: 50px;
+  cursor: pointer;
 }
 .create .create-content .input-holder .recipeImage-holder label {
   width: 110px;
@@ -1306,6 +1307,7 @@ a {
   font-size: 17px;
   color: black;
   margin-top: -20px;
+  cursor: pointer;
 }
 .create .create-content .input-holder .recipeImage-holder a .addBtn {
   width: 110px;
@@ -1807,6 +1809,47 @@ a {
   color: black;
 }
 .yourRecipes .yourRecipes-content .yourRecipes-holder .recipe .pizza .viewbtn:hover {
+  font-family: caveatB;
+}
+.yourRecipes .yourRecipes-content .yourRecipes-holder .recipe .burger {
+  width: 300px;
+  height: 263px;
+  background-image: url(../images/recipe-burger);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.yourRecipes .yourRecipes-content .yourRecipes-holder .recipe .burger .viewbtn {
+  background-color: #ffd972;
+  -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  width: 128px;
+  height: 42px;
+  border-radius: 26px;
+  font-family: caveatR;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  color: black;
+}
+.yourRecipes .yourRecipes-content .yourRecipes-holder .recipe .burger .viewbtn:hover {
   font-family: caveatB;
 }
 .yourRecipes .yourRecipes-content .yourRecipes-holder .recipe .text-holder {

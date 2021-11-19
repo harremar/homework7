@@ -58,11 +58,11 @@ function loadPublicRecipes() {
   // $(".browse").empty();
   $(".foodrecipe").empty();
 
-  $.getJSON("data/data.json", function (recipes) {
+  $.getJSON("http://localhost:3000/PUBLIC_RECIPES", function (recipes) {
     // console.log(recipes.PUBLIC_RECIPES);
     $(".recipes-holder").empty();
     //loop though all the recipes
-    $.each(recipes.PUBLIC_RECIPES, function (index, recipe) {
+    $.each(recipes, function (index, recipe) {
       console.log(recipe.recipeName);
       // should loop through all ingredients in certain recipe
 
@@ -104,8 +104,8 @@ function loadPublicRecipes() {
 }
 
 function loadPublicRecipe(recipeIndex) {
-  $.getJSON("data/data.json", function (recipes) {
-    let recipe = recipes.PUBLIC_RECIPES[recipeIndex];
+  $.getJSON("http://localhost:3000/PUBLIC_RECIPES", function (recipes) {
+    let recipe = recipes[recipeIndex];
     let recipeHTMLString = `<div class="foodrecipe">
     <div class="top-section">
         <div class="right-content">
@@ -146,10 +146,12 @@ function loadPublicRecipe(recipeIndex) {
 
 function loadUserRecipe() {
   $(".foodrecipe").empty();
-  $.getJSON("data/data.json", function (recipes) {
-    // console.log(recipes.USER_RECIPES);
+  $.getJSON("http://localhost:3000/USER_RECIPES", function (recipes) {
+    console.log(recipes);
     $(".recipes-holder").empty();
-    $.each(recipes.USER_RECIPES, function (index, recipe) {
+    $(".yourRecipes-holder").empty();
+
+    $.each(recipes, function (index, recipe) {
       console.log(recipe.recipeName);
       // should loop through all ingredients in certain recipe
 
@@ -182,6 +184,35 @@ function loadUserRecipe() {
                         </div>
                     </div>
       `);
+
+      //FOR THE YOUR RECIPES PAGE
+      $(".yourRecipes-holder").append(`
+      <div class="recipe">
+                        <div class="${recipe.image}">
+                            <a href="#/private/${index}"><div class="viewbtn">View</div></a>
+                        </div>
+                        <div class="text-holder">
+                            <div class="title">
+                                <h1>${recipe.recipeName}</h1>
+                            </div>
+                            <div class="text">
+                                <p>${recipe.description}</p>
+                            </div>
+                            <div class="info">
+                                <div class="time"></div>
+                                <div class="words">
+                                    <p>${recipe.time}</p>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <div class="servings"></div>
+                                <div class="words">
+                                    <p>${recipe.servings}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+      `);
     });
   }).fail(function (jqxhr, textStatus, error) {
     console.log(
@@ -190,8 +221,8 @@ function loadUserRecipe() {
   });
 }
 function UserRecipeLoad(recipeIndex) {
-  $.getJSON("data/data.json", function (recipes) {
-    let recipe = recipes.USER_RECIPES[recipeIndex];
+  $.getJSON("http://localhost:3000/USER_RECIPES", function (recipes) {
+    let recipe = recipes[recipeIndex];
 
     let recipeHTMLString = `<div class="foodrecipe">
     <div class="top-section">
@@ -311,11 +342,15 @@ function signOut() {
 
 document.addEventListener("DOMContentLoaded", function () {
   const recipeForm = document.querySelector("#recipeForm");
-  const recipeURL = `http://localhost:5000/#/browse`;
+  // const recipeURL = `http://localhost:5000/data.json`;
+  const recipeURL = `http://localhost:3000/USER_RECIPES`;
+
+  let allrecipes = [];
   fetch(`${"recipeURL"}`)
     .then((response) => response.json())
     .then((recipeData) =>
       recipeData.foreach(function (recipe) {
+        allrecipes = recipeData;
         recipeForm.innerHTML += `<div class="foodrecipe">
         <div class="top-section">
             <div class="right-content">
@@ -341,8 +376,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         recipeHTMLString += `</div><div class="info">
               <h1>Instructions:</h1>`;
-        $.each(recipe.instructions, function (index3, instruction) {
-          let n = index3++;
+        $.each(recipe.instructions, function (index, instruction) {
+          let n = index++;
           recipeHTMLString += `<p>${instruction.instruction}</p>`;
         });
         recipeHTMLString += `</div>
@@ -352,122 +387,136 @@ document.addEventListener("DOMContentLoaded", function () {
                  </div></div>`;
       })
     ); //end of fetch
+  // recipeForm.addEventListener("submit", (e) => {
+  //   event.preventDefault();
+  //   console.log(e.target);
+  //   // additional functionality goes down here!!
+  //   const recipeInput = recipeForm.querySelector("#recipeInput").value;
+  //   const descriptionInput =
+  //     recipeForm.querySelector("#descriptionInput").value;
+  //   const timeInput = recipeForm.querySelector("#timeInput").value;
+  //   const servingInput = recipeForm.querySelector("#servingInput").value;
+  //   for (i = 1; i < ingredCounter + 1; i++) {
+  //     const ingredientInput = recipeForm.querySelector("#ind" + i).value;
+  //   }
+  //   for (i = 1; i < instCounter + 1; i++) {
+  //     const instructionInput = recipeForm.querySelector("#inst" + i).value;
+  //   }
+  //   fetch(`${recipeURL}`, {
+  //     method: "POST",
+  //     body: JSON.stringify({
+  //       title: titleInput,
+  //       image: imageInput,
+  //       description: descriptionInput,
+  //       time: timeInput,
+  //       servings: servingInput,
+  //       ingredients: [{ ingredients: ingredientInput }],
+  //       instructions: [{ instruction: instructionInput }],
+  //     }),
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //   })
+  //     .then((response) => response.json())
+  //     .then((recipe) => {
+  //       let recipeHTMLString = `<div class="foodrecipe">
+  //       <div class="top-section">
+  //           <div class="right-content">
+  //               <div class="title"><h1>${recipe.recipeName}</h1></div>
+  //               <div class="image-${recipe.image}"></div>
+  //           </div>
+  //           <div class="left-content">
+  //               <h2>Description:</h2>
+  //               <p>${recipe.description}</p>
+  //               <h3>Total time:</h3>
+  //               <p>${recipe.time}</p>
+  //               <h3>Servings:</h3>
+  //               <p>${recipe.servings}</p>
+  //           </div>
+  //       </div>
+  //       <div class="bottom-section">
+  //           <div class="info">
+  //               <h1>Ingredients:</h1>`;
+  //       $.each(recipe.ingredients, function (index, ingredient) {
+  //         console.log("ingred ", ingredient);
+  //         recipeHTMLString += `<p>${ingredient.ingredient}</p>`;
+  //       });
+
+  //       recipeHTMLString += `</div><div class="info">
+  //             <h1>Instructions:</h1>`;
+  //       $.each(recipe.instructions, function (index3, instruction) {
+  //         let n = index3++;
+  //         recipeHTMLString += `<p>${instruction.instruction}</p>`;
+  //       });
+  //       recipeHTMLString += `</div>
+  //                <div class="dvEdit">
+  //                    <a href="#/editpizza"><div class="btn">
+  //                        Edit Recipe</div></a>
+  //                </div></div>`;
+  //       $("#app").html(recipeHTMLString);
+  //     });
+  // });
 });
-recipeForm.addEventListener("submit", (e) => {
-  event.preventDefault();
-  console.log(e.target);
-  // additional functionality goes down here!!
-  const recipeInput = recipeForm.querySelector("#recipeInput").value;
-  const descriptionInput = recipeForm.querySelector("#descriptionInput").value;
-  const timeInput = recipeForm.querySelector("#timeInput").value;
-  const servingInput = recipeForm.querySelector("#servingInput").value;
+
+//   // everything else we type will go inside this!!
+function createRecipe() {
+  const recipeForm = document.querySelector("#recipeForm");
+  const recipeURL = `http://localhost:3000/USER_RECIPES`;
+  console.log("This is the form: ", recipeForm);
+  alert("You have created a new recipe");
+  console.log("Create Recipe button was clicked");
+  let recipeImageText = $("#recipeImageText").val();
+  let recipeImage = $("#recipeImage").val();
+  let foodName = $("#recipeInput").val();
+  let recipeDescription = $("#descriptionInput").val();
+  let recipeTime = $("#timeInput").val();
+  let recipeServing = $("#servingInput").val();
+
   for (i = 1; i < ingredCounter + 1; i++) {
-    const ingredientInput = recipeForm.querySelector("#ind" + i).value;
+    let ind = $("#ind" + i).val();
+    console.log("ingredient #", i, " ", ind);
   }
   for (i = 1; i < instCounter + 1; i++) {
-    const instructionInput = recipeForm.querySelector("#inst" + i).value;
+    let inst = $("#inst" + i).val();
+    console.log("instruction #", i, " ", inst);
   }
+
+  console.log("Recipe Image Text: ", recipeImageText);
+  console.log("Recipe Image: ", recipeImage);
+  console.log("Name: ", foodName);
+  console.log("Description: ", recipeDescription);
+  console.log("Time: ", recipeTime);
+  console.log("Serving: ", recipeServing);
+
   fetch(`${recipeURL}`, {
     method: "POST",
     body: JSON.stringify({
-      title: titleInput,
-      image: imageInput,
-      description: descriptionInput,
-      time: timeInput,
-      servings: servingInput,
-      ingredients: [{ ingredients: ingredientInput }],
-      instructions: [{ instruction: instructionInput }],
+      id: Date.now(),
+      recipeName: foodName,
+      image: recipeImageText,
+      description: recipeDescription,
+      time: recipeTime,
+      servings: recipeServing,
+      // ingredients: [{ ingredient: ind }],
+      // instructions: [{ instruction: inst }],
     }),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  })
-    .then((response) => response.json())
-    .then((recipe) => {
-      let recipeHTMLString = `<div class="foodrecipe">
-    <div class="top-section">
-        <div class="right-content">
-            <div class="title"><h1>${recipe.recipeName}</h1></div>
-            <div class="image-${recipe.image}"></div>
-        </div>
-        <div class="left-content">
-            <h2>Description:</h2>
-            <p>${recipe.description}</p>
-            <h3>Total time:</h3>
-            <p>${recipe.time}</p>
-            <h3>Servings:</h3>
-            <p>${recipe.servings}</p>
-        </div>
-    </div>
-    <div class="bottom-section">
-        <div class="info">
-            <h1>Ingredients:</h1>`;
-      $.each(recipe.ingredients, function (index, ingredient) {
-        console.log("ingred ", ingredient);
-        recipeHTMLString += `<p>${ingredient.ingredient}</p>`;
-      });
-
-      recipeHTMLString += `</div><div class="info">
-          <h1>Instructions:</h1>`;
-      $.each(recipe.instructions, function (index3, instruction) {
-        let n = index3++;
-        recipeHTMLString += `<p>${instruction.instruction}</p>`;
-      });
-      recipeHTMLString += `</div>
-             <div class="dvEdit">
-                 <a href="#/editpizza"><div class="btn">
-                     Edit Recipe</div></a>
-             </div></div>`;
-      $("#app").html(recipeHTMLString);
-    });
-});
-//   // everything else we type will go inside this!!
-// function createRecipe() {
-//   // const recipeForm = document.querySelector("#recipeForm");
-//   console.log("This is the form: ", recipeForm);
-//   alert("You have created a new recipe");
-//   console.log("Create Recipe button was clicked");
-//   let recipeImageText = $("#recipeImageText").val();
-//   let recipeImage = $("#recipeImage").val();
-//   let foodName = $("#recipeName").val();
-//   let recipeDescription = $("#recipeDescription").val();
-//   let recipeTime = $("#recipeTime").val();
-//   let recipeServing = $("#recipeServing").val();
-
-//   for (i = 1; i < ingredCounter + 1; i++) {
-//     let ind = $("#ind" + i).val();
-//     console.log("ingredient #", i, " ", ind);
-//   }
-//   for (i = 1; i < instCounter + 1; i++) {
-//     let inst = $("#inst" + i).val();
-//     console.log("instruction #", i, " ", inst);
-//   }
-
-//   console.log("Recipe Image: ", recipeImageText);
-//   console.log("Recipe Image: ", recipeImage);
-//   console.log("Name: ", foodName);
-//   console.log("Description: ", recipeDescription);
-//   console.log("Time: ", recipeTime);
-//   console.log("Serving: ", recipeServing);
-
-//   fetch(`${USER_RECIPES}`, {
-//     method: "POST",
-//     body: JSON.stringify({
-//       recipeName: foodName,
-//       image: recipeImage,
-//       description: recipeDescription,
-//       time: recipeTime,
-//       servings: recipeServing,
-//       ingredients: [{ ingredient: ind }],
-//       instructions: [{ instruction: inst }],
-//     }),
-//     headers: { "Content-Type": "data/data.json" },
-//   });
-// }
+    headers: { "Content-Type": "application/json" },
+  });
+}
 
 function editRecipe() {
+  alert("Lets update your recipe");
+  console.log("Lets update your recipe");
+}
+
+function editRecipeSubmit() {
   alert("You have updated your recipe");
   console.log("You have updated your recipe");
+}
+
+function deleteRecipe() {
+  alert("You have deleted your recipe");
+  console.log("You have deleted your recipe");
 }
 //function that gets pageID
 function route() {
@@ -511,7 +560,7 @@ function route() {
     } else if (pageID == "pizzarecipe") {
       // MODEL.getMyContent(pageID, loadPublicRecipes);
     } else if (pageID == "yourRecipes") {
-      MODEL.getMyContent(pageID, updateSiteWithInfo);
+      MODEL.getMyContent(pageID, loadUserRecipe, updateSiteWithInfo);
     } else if (pageID == "create") {
       MODEL.getMyContent(pageID, updateSiteWithInfo);
     } else if (pageID == "editpizza") {

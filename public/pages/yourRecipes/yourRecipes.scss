@@ -84,6 +84,36 @@
           display: flex;
           align-items: center;
           justify-content: space-evenly;
+          // background-color: red;
+
+          .viewbtn {
+            background-color: #ffd972;
+            box-shadow: 0 10px 6px rgba($color: #000000, $alpha: 0.16);
+            width: 128px;
+            height: 42px;
+            border-radius: 26px;
+            font-family: caveatR;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            color: black;
+          }
+          .viewbtn:hover {
+            font-family: caveatB;
+          }
+        }
+        .burger {
+          width: 300px;
+          height: 263px;
+          background-image: url(../images/recipe-burger);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          border-radius: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
 
           .viewbtn {
             background-color: #ffd972;

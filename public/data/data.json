@@ -8,14 +8,30 @@
       "servings": "4 servings",
       "link": "supremepizza",
       "ingredients": [
-        { "ingredient": "1/4 batch pizza dough" },
-        { "ingredient": "2 tablespoons Last-Minute Pizza Sauce" },
-        { "ingredient": "10 slices pepperoni" },
-        { "ingredient": "1 cup cooked and crumbled Italian sausage" },
-        { "ingredient": "2 large mushrooms, sliced" },
-        { "ingredient": "1/4 bell pepper, sliced" },
-        { "ingredient": "1 tablespoon sliced black olives" },
-        { "ingredient": "1 cup shredded mozzarella cheese" }
+        {
+          "ingredient": "1/4 batch pizza dough"
+        },
+        {
+          "ingredient": "2 tablespoons Last-Minute Pizza Sauce"
+        },
+        {
+          "ingredient": "10 slices pepperoni"
+        },
+        {
+          "ingredient": "1 cup cooked and crumbled Italian sausage"
+        },
+        {
+          "ingredient": "2 large mushrooms, sliced"
+        },
+        {
+          "ingredient": "1/4 bell pepper, sliced"
+        },
+        {
+          "ingredient": "1 tablespoon sliced black olives"
+        },
+        {
+          "ingredient": "1 cup shredded mozzarella cheese"
+        }
       ],
       "instructions": [
         {
@@ -24,7 +40,9 @@
         {
           "instruction": "2. Flatten dough into a thin round and place on the pizza pan."
         },
-        { "instruction": "3. Spread pizza sauce over the dough." },
+        {
+          "instruction": "3. Spread pizza sauce over the dough."
+        },
         {
           "instruction": "4. Layer the toppings over the dough in the order listed."
         },
@@ -41,19 +59,45 @@
       "servings": "4 servings",
       "link": "burgerrecipe",
       "ingredients": [
-        { "ingredient": "1 lb ground beef" },
-        { "ingredient": "1/2 cup minced onion" },
-        { "ingredient": "1 large egg" },
-        { "ingredient": "1 Tbsp Worcestershire" },
-        { "ingredient": "1 colve garlic" },
-        { "ingredient": "1/2 tsp salt" },
-        { "ingredient": "1/4 tsp pepper" },
-        { "ingredient": "4 hamburger buns" },
-        { "ingredient": "1/4 cup mayonnaise" },
-        { "ingredient": "1/4 cup ketchup" },
-        { "ingredient": "4 iceberg lettuce leaves" },
-        { "ingredient": "4 tomato slices" },
-        { "ingredient": "4 slices red onion" }
+        {
+          "ingredient": "1 lb ground beef"
+        },
+        {
+          "ingredient": "1/2 cup minced onion"
+        },
+        {
+          "ingredient": "1 large egg"
+        },
+        {
+          "ingredient": "1 Tbsp Worcestershire"
+        },
+        {
+          "ingredient": "1 colve garlic"
+        },
+        {
+          "ingredient": "1/2 tsp salt"
+        },
+        {
+          "ingredient": "1/4 tsp pepper"
+        },
+        {
+          "ingredient": "4 hamburger buns"
+        },
+        {
+          "ingredient": "1/4 cup mayonnaise"
+        },
+        {
+          "ingredient": "1/4 cup ketchup"
+        },
+        {
+          "ingredient": "4 iceberg lettuce leaves"
+        },
+        {
+          "ingredient": "4 tomato slices"
+        },
+        {
+          "ingredient": "4 slices red onion"
+        }
       ],
       "instructions": [
         {
@@ -78,18 +122,42 @@
       "servings": "6 servings",
       "link": "pilafrecipe",
       "ingredients": [
-        { "ingredient": "300g basmati rice" },
-        { "ingredient": "25g butter" },
-        { "ingredient": "1 large onion, finely sliced" },
-        { "ingredient": "1 bay leaf" },
-        { "ingredient": "3 cardamom pods" },
-        { "ingredient": "small cinnamon stick" },
-        { "ingredient": "4 skinless chicken breasts, cut into large chuncks" },
-        { "ingredient": "4 tbsp balti curry paste" },
-        { "ingredient": "85g raisins" },
-        { "ingredient": "850ml chicken stock" },
-        { "ingredient": "30g coriander" },
-        { "ingredient": "2 tbsp toasted flaked almonds" }
+        {
+          "ingredient": "300g basmati rice"
+        },
+        {
+          "ingredient": "25g butter"
+        },
+        {
+          "ingredient": "1 large onion, finely sliced"
+        },
+        {
+          "ingredient": "1 bay leaf"
+        },
+        {
+          "ingredient": "3 cardamom pods"
+        },
+        {
+          "ingredient": "small cinnamon stick"
+        },
+        {
+          "ingredient": "4 skinless chicken breasts, cut into large chuncks"
+        },
+        {
+          "ingredient": "4 tbsp balti curry paste"
+        },
+        {
+          "ingredient": "85g raisins"
+        },
+        {
+          "ingredient": "850ml chicken stock"
+        },
+        {
+          "ingredient": "30g coriander"
+        },
+        {
+          "ingredient": "2 tbsp toasted flaked almonds"
+        }
       ],
       "instructions": [
         {
@@ -120,18 +188,42 @@
       "servings": "4 servings",
       "link": "chowmeinrecipe",
       "ingredients": [
-        { "ingredient": "1 lb shrimp" },
-        { "ingredient": "2 packages of refrigerated yakisoba noodles" },
-        { "ingredient": "1/2 cup julienned carrots" },
-        { "ingredient": "1/2 cup cliced white onion" },
-        { "ingredient": "1/4 cups sliced celery" },
-        { "ingredient": "1 cup shredded green cabbage" },
-        { "ingredient": "1/4 soy sauce" },
-        { "ingredient": "1 tbsp honey" },
-        { "ingredient": "2 tsp minced ginger" },
-        { "ingredient": "2 tsp minced garlic" },
-        { "ingredient": "2 tsp toasted sesame oil" },
-        { "ingredient": "salt and pepper" }
+        {
+          "ingredient": "1 lb shrimp"
+        },
+        {
+          "ingredient": "2 packages of refrigerated yakisoba noodles"
+        },
+        {
+          "ingredient": "1/2 cup julienned carrots"
+        },
+        {
+          "ingredient": "1/2 cup cliced white onion"
+        },
+        {
+          "ingredient": "1/4 cups sliced celery"
+        },
+        {
+          "ingredient": "1 cup shredded green cabbage"
+        },
+        {
+          "ingredient": "1/4 soy sauce"
+        },
+        {
+          "ingredient": "1 tbsp honey"
+        },
+        {
+          "ingredient": "2 tsp minced ginger"
+        },
+        {
+          "ingredient": "2 tsp minced garlic"
+        },
+        {
+          "ingredient": "2 tsp toasted sesame oil"
+        },
+        {
+          "ingredient": "salt and pepper"
+        }
       ],
       "instructions": [
         {
@@ -164,27 +256,22 @@
       ]
     }
   ],
-
   "USER_RECIPES": [
     {
-      "recipeName": "TESTTTT",
+      "id": 1637288496963,
+      "recipeName": "Cheese Pizza",
+      "image": "pizza",
+      "description": "Just a classic cheese pizza!",
+      "time": "20 min",
+      "servings": "2 servings"
+    },
+    {
+      "id": 1637288766428,
+      "recipeName": "classic burger",
       "image": "burger",
-      "description": "HELLOO TEST TEST",
-      "time": "1h 24min",
-      "servings": "4 servings",
-      "link": "pizzarecipe",
-      "ingredients": [
-        { "ingredient": "ingredient uno" },
-        { "ingredient": "ingredient dos" },
-        { "ingredient": "ingredient tres" },
-        { "ingredient": "ingredient cuatro" }
-      ],
-      "instructions": [
-        { "instruction": "instruction uno" },
-        { "instruction": "instruction dos" },
-        { "instruction": "instruction tres" },
-        { "instruction": "instruction cuatro" }
-      ]
+      "description": "just a classic burger",
+      "time": "35 min",
+      "servings": "4 servings"
     }
   ]
 }
