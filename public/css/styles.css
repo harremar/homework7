@@ -77,6 +77,7 @@ a {
   width: 100%;
   z-index: 3;
   background-color: aqua;
+  background-color: red;
 }
 
 .header ul {
@@ -209,6 +210,7 @@ a {
   transition: max-height 0.2s ease-out;
   text-align: center;
   margin-right: 20px;
+  /* background-color: red; */
 }
 
 /* menu icon */
@@ -328,6 +330,9 @@ a {
   }
 }
 @media (max-width: 900px) {
+  .header {
+    max-width: 900px;
+  }
   .header .menu {
     background-color: rgba(255, 255, 255, 0.9);
     width: 200px;
@@ -1810,7 +1815,7 @@ a {
 .yourRecipes .yourRecipes-content {
   margin-top: 120px;
   margin-bottom: 100px;
-  width: 90%;
+  max-width: 90%;
   min-height: 670px;
   /* background-color: green; */
   float: left;
@@ -1869,7 +1874,7 @@ a {
 }
 .yourRecipes .yourRecipes-content .yourRecipeContainer {
   flex-flow: row wrap;
-  width: 527px;
+  max-width: 527px;
   height: 300px;
   margin: 50px;
   /* min-height: 800px; */

@@ -1,20 +1,20 @@
-<div class="create">
+<div id='edit-recipeForm' class="create">
     <div class="create-content">
         <div class="editName">
             <h2></h2>
         </div>
         <div class="input-holder">
             <div class="recipeImage-holder">
-                <input type="text" placeholder="Add Recipe Image" maxlength="30">
+                <input id="recipeImageText" type="text" placeholder="Add Recipe Image" maxlength="30">
                 
                 <input type="file" id="upload" style="display: none;">
                 <label class="addBtn" for="upload">Attach file</label>
             
             </div>
-            <input type="text" placeholder="Recipe Name" maxlength="30">
-            <input type="text" placeholder="Recipe Description" maxlength="30">
-            <input type="text" placeholder="Recipe Total Time" maxlength="30">
-            <input type="text" placeholder="Recipe Serving Size" maxlength="30">
+            <input id='recipeInput' type="text" placeholder="Recipe Name" maxlength="30">
+            <input id="descriptionInput" type="text" placeholder="Recipe Description" maxlength="30">
+            <input id="timeInput" type="text" placeholder="Recipe Total Time" maxlength="30">
+            <input id='servingInput' type="text" placeholder="Recipe Serving Size" maxlength="30">
         </div>
     </div>
 
@@ -36,7 +36,16 @@
         <div class="plusbtn" onclick="addInst()">+</div>
       </div>
 
-      <div class="createRecipesCreator" onclick="editRecipeSubmit()"><a href="#/yourRecipes">Submit Changes</a></div>
-    
+    <div class="createRecipesCreator" onclick="editRecipeSubmit()">
+        <a href="#/yourRecipes">Submit Changes</a>
+    </div>
 
+
+    <script> 
+        let recipe_id = sessionStorage.getItem('edit-recipe-id');
+        console.log({recipe_id});
+        if(recipe_id){ 
+            prefilEditForm(recipe_id);
+        }
+    </script>
 </div>

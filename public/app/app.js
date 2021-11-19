@@ -186,7 +186,9 @@ function loadUserRecipe() {
       `);
 
       //FOR THE YOUR RECIPES PAGE
-      $(".yourRecipes-content").append(`<div class= "yourRecipeContainer">
+      $(
+        ".yourRecipes-content"
+      ).append(`<div class= "yourRecipeContainer" id="recipe-${recipe.id}">
       <div class="yourRecipes-holder">
                         <div class="recipe">
                             <div class="${recipe.image}">
@@ -216,10 +218,10 @@ function loadUserRecipe() {
                 </div>
                 <div class="mod-holder">
                     <a href="#/edit">
-                        <div class="modbtn" onclick="editRecipe()" >Edit Recipe</div>
+                        <div class="modbtn" onclick="editRecipe(${recipe.id})" >Edit Recipe</div>
                     </a>
-                    <a href="#">
-                        <div class="modbtn" onclick="deleteRecipe()">Delete</div>
+                    <a href="javscript:viod(0);">
+                        <div class="modbtn" onclick="deleteRecipe(${recipe.id})">Delete</div>
                     </a>
                 </div>
                 </div>
@@ -310,8 +312,6 @@ function createUser() {
 
 //this function hapens when login button is clicked
 function login() {
-  // let password = "password"; //$("#password").val();
-  // let email = "mArielleh724@gmail.com";
   //gets users password and email input
   let password = $("#password").val(); //$("#password").val();
   let email = $("#email").val();
@@ -398,84 +398,17 @@ document.addEventListener("DOMContentLoaded", function () {
                  </div></div>`;
       })
     ); //end of fetch
-  // recipeForm.addEventListener("submit", (e) => {
-  //   event.preventDefault();
-  //   console.log(e.target);
-  //   // additional functionality goes down here!!
-  //   const recipeInput = recipeForm.querySelector("#recipeInput").value;
-  //   const descriptionInput =
-  //     recipeForm.querySelector("#descriptionInput").value;
-  //   const timeInput = recipeForm.querySelector("#timeInput").value;
-  //   const servingInput = recipeForm.querySelector("#servingInput").value;
-  //   for (i = 1; i < ingredCounter + 1; i++) {
-  //     const ingredientInput = recipeForm.querySelector("#ind" + i).value;
-  //   }
-  //   for (i = 1; i < instCounter + 1; i++) {
-  //     const instructionInput = recipeForm.querySelector("#inst" + i).value;
-  //   }
-  //   fetch(`${recipeURL}`, {
-  //     method: "POST",
-  //     body: JSON.stringify({
-  //       title: titleInput,
-  //       image: imageInput,
-  //       description: descriptionInput,
-  //       time: timeInput,
-  //       servings: servingInput,
-  //       ingredients: [{ ingredients: ingredientInput }],
-  //       instructions: [{ instruction: instructionInput }],
-  //     }),
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //   })
-  //     .then((response) => response.json())
-  //     .then((recipe) => {
-  //       let recipeHTMLString = `<div class="foodrecipe">
-  //       <div class="top-section">
-  //           <div class="right-content">
-  //               <div class="title"><h1>${recipe.recipeName}</h1></div>
-  //               <div class="image-${recipe.image}"></div>
-  //           </div>
-  //           <div class="left-content">
-  //               <h2>Description:</h2>
-  //               <p>${recipe.description}</p>
-  //               <h3>Total time:</h3>
-  //               <p>${recipe.time}</p>
-  //               <h3>Servings:</h3>
-  //               <p>${recipe.servings}</p>
-  //           </div>
-  //       </div>
-  //       <div class="bottom-section">
-  //           <div class="info">
-  //               <h1>Ingredients:</h1>`;
-  //       $.each(recipe.ingredients, function (index, ingredient) {
-  //         console.log("ingred ", ingredient);
-  //         recipeHTMLString += `<p>${ingredient.ingredient}</p>`;
-  //       });
-
-  //       recipeHTMLString += `</div><div class="info">
-  //             <h1>Instructions:</h1>`;
-  //       $.each(recipe.instructions, function (index3, instruction) {
-  //         let n = index3++;
-  //         recipeHTMLString += `<p>${instruction.instruction}</p>`;
-  //       });
-  //       recipeHTMLString += `</div>
-  //                <div class="dvEdit">
-  //                    <a href="#/editpizza"><div class="btn">
-  //                        Edit Recipe</div></a>
-  //                </div></div>`;
-  //       $("#app").html(recipeHTMLString);
-  //     });
-  // });
 });
 
 //   // everything else we type will go inside this!!
 function createRecipe() {
   const recipeForm = document.querySelector("#recipeForm");
+
   const recipeURL = `http://localhost:3000/USER_RECIPES`;
   console.log("This is the form: ", recipeForm);
   alert("You have created a new recipe");
   console.log("Create Recipe button was clicked");
+
   let recipeImageText = $("#recipeImageText").val();
   let recipeImage = $("#recipeImage").val();
   let foodName = $("#recipeInput").val();
@@ -515,9 +448,33 @@ function createRecipe() {
   });
 }
 
-function editRecipe() {
-  alert("Lets update your recipe");
+function editRecipe(recipe_id) {
   console.log("Lets update your recipe");
+  console.log({ recipe_id });
+  sessionStorage.setItem("edit-recipe-id", recipe_id);
+}
+
+function prefilEditForm(recipe_id) {
+  console.log({ recipe_id });
+  const recipeForm = document.querySelector("#edit-recipeForm");
+  console.log({ recipeForm });
+  if (recipeForm) {
+    console.log({ recipeForm });
+    const recipeURL = `http://localhost:3000/USER_RECIPES`;
+    fetch(`${recipeURL}/${recipe_id}`, {
+      method: "GET",
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log({ data });
+        $("#recipeImageText").val(data.image);
+        $("#recipeInput").val(data.recipeName);
+        $("#descriptionInput").val(data.description);
+        $("#timeInput").val(data.time);
+        $("#servingInput").val(data.servings);
+      });
+  }
 }
 
 function editRecipeSubmit() {
@@ -525,14 +482,28 @@ function editRecipeSubmit() {
   console.log("You have updated your recipe");
 }
 
-function deleteRecipe() {
-  alert("You have deleted your recipe");
+function deleteRecipe(recipe_id) {
+  const recipeURL = `http://localhost:3000/USER_RECIPES`;
+  // alert("You have deleted your recipe");
   console.log("You have deleted your recipe");
+
+  fetch(`${recipeURL}/${recipe_id}`, {
+    method: "DELETE",
+    headers: { "Content-Type": "application/json" },
+  }).then((response) => {
+    if (response.status === 200) {
+      let item = document.getElementById(`recipe-${recipe_id}`);
+      if (item) {
+        item.style.display = "none";
+      }
+    }
+  });
 }
 //function that gets pageID
 function route() {
   let hashTag = window.location.hash;
   let pageID = hashTag.replace("#/", "");
+
   let publicRecipeIndex = pageID.indexOf("public");
   let publicRecipeName = "";
 
