@@ -801,8 +801,6 @@ a {
   justify-content: space-between;
 }
 .browse .browse-content .recipes-holder2 .recipe {
-  /* background-color: red; */
-  margin: 30px auto;
   width: 525px;
   min-height: 263px;
   display: -webkit-box;
@@ -815,6 +813,7 @@ a {
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 50px;
+  /* background-color: red; */
 }
 .browse .browse-content .recipes-holder2 .recipe .pizza {
   width: 300px;
@@ -1474,6 +1473,16 @@ a {
     min-height: 400px;
   }
   .browse .browse-content .recipes-holder .recipe {
+    margin: 0 auto 40px auto;
+  }
+  .browse .browse-content .recipes-holder2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-height: 400px;
+  }
+  .browse .browse-content .recipes-holder2 .recipe {
     margin: 0 auto 40px auto;
   }
 }
