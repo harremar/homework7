@@ -8,22 +8,21 @@ var fullName = "";
 
 function initFirebase() {
   firebase.auth().onAuthStateChanged(function (user) {
+    //if user is there
     if (user) {
       loggedIn = true;
-      console.log("connected " + user.email + " " + loggedIn);
-      console.log("auth user " + user.displayName);
       if (user.displayName == null) {
         firebase
           .auth()
           .currentUser.updateProfile({
-            displayName: fullName,
+            displayName: fullName, //get full name and update site
           })
           .then(() => {
             updateSiteWithInfo();
           });
       } else {
         fullName = user.displayName;
-        console.log("auth " + fullName);
+        // console.log("auth " + fullName);
       }
       $("#loginbutton").css("display", "none");
       $("#logoutbutton").css("display", "flex");
@@ -31,9 +30,10 @@ function initFirebase() {
       $(".createRecipesLink").css("display", "flex");
       $(".dvEdit").css("display", "flex");
       browseName.innerHTML = "Browse All";
-    } else {
+    }
+    //if user is not there do these display
+    else {
       loggedIn = false;
-      console.log("user is not there");
       $("#loginbutton").css("display", "flex");
       $("#logoutbutton").css("display", "none");
       $(".yourRecipesLink").css("display", "none");
@@ -45,8 +45,8 @@ function initFirebase() {
   });
 }
 
+//update site. puts user name on the page
 function updateSiteWithInfo() {
-  //THESE ELEMENTS AREN'T ON THE PAGE. NEED A CALLBACK??? MAYBE
   $(".createName h2").html("Hey " + fullName + ", create your recipe!");
 
   $(".editName h2").html("Hey " + fullName + ", edit your recipe!");
@@ -54,19 +54,15 @@ function updateSiteWithInfo() {
   $(".yourName h2").html("Hey " + fullName + ", here are your recipes!");
 }
 
+//loads public recipes
 function loadPublicRecipes() {
-  // $(".browse").empty();
-  console.log(updateSiteWithInfo);
-
   $(".foodrecipe").empty();
 
   $.getJSON("http://localhost:3000/PUBLIC_RECIPES", function (recipes) {
-    // console.log(recipes.PUBLIC_RECIPES);
     $(".recipes-holder").empty();
     //loop though all the recipes
     $.each(recipes, function (index, recipe) {
-      console.log(recipe.recipeName);
-      // should loop through all ingredients in certain recipe
+      //loop through all ingredients in certain recipe
 
       //FOR THE BROWSER PAGE
       $(".recipes-holder").append(`
@@ -105,9 +101,11 @@ function loadPublicRecipes() {
   });
 }
 
+//get index for public
 function loadPublicRecipe(recipeIndex) {
   $.getJSON("http://localhost:3000/PUBLIC_RECIPES", function (recipes) {
     let recipe = recipes[recipeIndex];
+    //page looking at certain recipe
     let recipeHTMLString = `<div class="foodrecipe">
     <div class="top-section">
         <div class="right-content">
@@ -127,7 +125,7 @@ function loadPublicRecipe(recipeIndex) {
         <div class="info">
             <h1>Ingredients:</h1>`;
     $.each(recipe.ingredients, function (index, ingredient) {
-      console.log("ingred ", ingredient);
+      // console.log("ingred ", ingredient);
       recipeHTMLString += `<p>${ingredient.ingredient}</p>`;
     });
 
@@ -146,9 +144,9 @@ function loadPublicRecipe(recipeIndex) {
   });
 }
 
+//functon that loads user recipes
 function loadUserRecipe() {
   updateSiteWithInfo();
-
   $(".foodrecipe").empty();
   $.getJSON("http://localhost:3000/USER_RECIPES", function (recipes) {
     console.log(recipes);
@@ -157,7 +155,7 @@ function loadUserRecipe() {
 
     $.each(recipes, function (index, recipe) {
       console.log(recipe.recipeName);
-      // should loop through all ingredients in certain recipe
+      //loop through all ingredients in certain recipe
 
       //FOR THE BROWSER PAGE
       $(".recipes-holder2").append(`
@@ -237,6 +235,8 @@ function loadUserRecipe() {
     );
   });
 }
+
+//function to display a certain user recipe
 function UserRecipeLoad(recipeIndex) {
   $.getJSON("http://localhost:3000/USER_RECIPES", function (recipes) {
     let recipe = recipes[recipeIndex];
@@ -287,13 +287,13 @@ function createUser() {
   let email = $("#cemail").val();
   let fName = $("#fName").val();
   let lName = $("#lName").val();
-  console.log(password + " and " + email);
-  console.log(password);
-  console.log(email);
-  console.log(fName);
-  console.log(lName);
+  // console.log(password + " and " + email);
+  // console.log(password);
+  // console.log(email);
+  // console.log(fName);
+  // console.log(lName);
   fullName = fName + " " + lName;
-  console.log(fullName);
+  // console.log(fullName);
 
   firebase
     .auth()
@@ -301,7 +301,7 @@ function createUser() {
     .then((userCredential) => {
       // Signed in
       var user = userCredential.user;
-      console.log(userCredential.user);
+      // console.log(userCredential.user);
       // alert("you have created an account " + displayName);
 
       // ...
@@ -309,7 +309,7 @@ function createUser() {
     .catch((error) => {
       var errorCode = error.code;
       var errorMessage = error.message;
-      console.log(errorMessage);
+      // console.log(errorMessage);
       alert("error");
       // ..
     });
@@ -321,7 +321,7 @@ function login() {
   let password = $("#password").val(); //$("#password").val();
   let email = $("#email").val();
   //shows password and email in console
-  console.log(password + " and " + email);
+  // console.log(password + " and " + email);
 
   firebase
     .auth()
@@ -329,7 +329,7 @@ function login() {
     .then((userCredential) => {
       // Signed in
       var user = userCredential.user;
-      console.log("signed in");
+      // console.log("signed in");
       alert("you have logged in");
     })
     .catch((error) => {
@@ -341,13 +341,13 @@ function login() {
 
 //this function happens when the logout button is clicked
 function signOut() {
-  console.log("signout button has been clicked");
+  // console.log("signout button has been clicked");
   firebase
     .auth()
     .signOut()
     .then(() => {
       // Sign-out successful.
-      console.log("signed out");
+      // console.log("signed out");
       alert("you are signed out");
     })
     .catch((error) => {
@@ -405,14 +405,14 @@ document.addEventListener("DOMContentLoaded", function () {
     ); //end of fetch
 });
 
-//   // everything else we type will go inside this!!
+//function to create a new recipe
 function createRecipe() {
   const recipeForm = document.querySelector("#recipeForm");
-  console.log({ recipeForm });
+  // console.log({ recipeForm });
 
-  console.log("This is the form: ", recipeForm);
+  // console.log("This is the form: ", recipeForm);
 
-  console.log("Create Recipe button was clicked");
+  // console.log("Create Recipe button was clicked");
 
   let recipeImageText = $("#recipeImageText").val();
   let recipeImage = $("#recipeImage").val();
@@ -423,6 +423,7 @@ function createRecipe() {
   let ingredients = [];
   let instructions = [];
 
+  //loop through all ing and push them onto page else stop loop
   let i = 1;
   let ing_stopLoop = true;
   for (i; ing_stopLoop; i++) {
@@ -435,6 +436,7 @@ function createRecipe() {
     }
   }
 
+  //loop through all inst and push then onto page else stop loop
   let j = 1;
   let inst_stopLoop = true;
   for (j; inst_stopLoop; j++) {
@@ -447,6 +449,7 @@ function createRecipe() {
     }
   }
 
+  //holds all data
   const payload = {
     id: Date.now(),
     recipeName: foodName,
@@ -458,11 +461,11 @@ function createRecipe() {
     instructions: instructions,
   };
 
-  console.log({ payload });
+  // console.log({ payload });
 
   const recipeURL = `http://localhost:3000/USER_RECIPES`;
   fetch(`${recipeURL}`, {
-    method: "POST",
+    method: "POST", //posting new recipe
     body: JSON.stringify(payload),
     headers: { "Content-Type": "application/json" },
   }).then((response) => {
@@ -472,24 +475,29 @@ function createRecipe() {
   });
 }
 
+//function to see if edit button was clicked
 function editRecipe(recipe_id) {
-  console.log("Lets update your recipe");
+  // console.log("Lets update your recipe");
+  //get recipe info
   sessionStorage.setItem("edit-recipe-id", recipe_id);
 }
 
+//function to make changes
 function prefilEditForm(recipe_id) {
+  //get recipe form
   const recipeForm = document.querySelector("#edit-recipeForm");
 
   if (recipeForm) {
     const recipeURL = `http://localhost:3000/USER_RECIPES`;
     fetch(`${recipeURL}/${recipe_id}`, {
-      method: "GET",
+      method: "GET", //getting info
       headers: { "Content-Type": "application/json" },
     })
       .then((response) => response.json())
       .then((data) => {
         console.log({ data });
 
+        //get the new data
         $("#recipeImageText").val(data.image);
         $("#recipeInput").val(data.recipeName);
         $("#descriptionInput").val(data.description);
@@ -499,6 +507,7 @@ function prefilEditForm(recipe_id) {
         let ingredients = data.ingredients ? data.ingredients : [];
         let ing_length = ingredients.length;
         let i = 0;
+        //loop through ing get new data
         for (i; i < ing_length; i++) {
           if (i < 3) {
             $(ingredients[i].id).val(ingredients[i].value);
@@ -511,6 +520,7 @@ function prefilEditForm(recipe_id) {
           }
         }
 
+        //loop through inst get new data
         let instructions = data.instructions ? data.instructions : [];
         let inst_length = instructions.length;
         let j = 0;
@@ -529,9 +539,11 @@ function prefilEditForm(recipe_id) {
   }
 }
 
+//function edit complete
 function editRecipeSubmit() {
   // You have updated your recipe;
 
+  //get new data val
   let id = sessionStorage.getItem("edit-recipe-id");
   let image = $("#recipeImageText").val();
   let recipeName = $("#recipeInput").val();
@@ -541,6 +553,7 @@ function editRecipeSubmit() {
   let ingredients = [];
   let instructions = [];
 
+  //get onto page
   let i = 1;
   let ing_stopLoop = true;
   for (i; ing_stopLoop; i++) {
@@ -553,6 +566,7 @@ function editRecipeSubmit() {
     }
   }
 
+  //get onto page
   let j = 1;
   let inst_stopLoop = true;
   for (j; inst_stopLoop; j++) {
@@ -565,6 +579,7 @@ function editRecipeSubmit() {
     }
   }
 
+  //holds data
   const payload = {
     id,
     image,
@@ -578,7 +593,7 @@ function editRecipeSubmit() {
 
   const recipeURL = `http://localhost:3000/USER_RECIPES`;
   fetch(`${recipeURL}/${payload.id}`, {
-    method: "PUT",
+    method: "PUT", //putting new data onto page
     body: JSON.stringify(payload),
     headers: { "Content-Type": "application/json" },
   }).then((response) => {
@@ -588,13 +603,14 @@ function editRecipeSubmit() {
   });
 }
 
+// function to delete recipe
 function deleteRecipe(recipe_id) {
   const recipeURL = `http://localhost:3000/USER_RECIPES`;
   // alert("You have deleted your recipe");
-  console.log("You have deleted your recipe");
+  // console.log("You have deleted your recipe");
 
   fetch(`${recipeURL}/${recipe_id}`, {
-    method: "DELETE",
+    method: "DELETE", //deleting recipe
     headers: { "Content-Type": "application/json" },
   }).then((response) => {
     if (response.status === 200) {

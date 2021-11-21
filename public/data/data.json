@@ -383,37 +383,53 @@
     },
     {
       "id": 1637466331120,
-      "recipeName": "nachos",
       "image": "nachos",
-      "description": "fdsfdsfdsf",
-      "time": "dsafdsafds",
-      "servings": "fdsfafda",
+      "recipeName": "nachos",
+      "description": "A great party appetizer!",
+      "time": "15 min",
+      "servings": "10 servings",
       "ingredients": [
         {
           "id": "#ind1",
-          "value": "fdsafdsf"
+          "value": "2 bags of Tortilla Chips"
         },
         {
           "id": "#ind2",
-          "value": "fdasfds"
+          "value": "1 Container of queso"
         },
         {
           "id": "#ind3",
-          "value": "fdsfdsaf"
+          "value": "1/2 cup diced tomatos"
+        },
+        {
+          "id": "#ind4",
+          "value": "1/2 cup jalapeño"
+        },
+        {
+          "id": "#ind5",
+          "value": "1/2 cup black olives"
+        },
+        {
+          "id": "#ind6",
+          "value": "1 cup salsa"
+        },
+        {
+          "id": "#ind7",
+          "value": "1 cup sour cream"
         }
       ],
       "instructions": [
         {
           "id": "#inst1",
-          "value": "fdsafdsf"
+          "value": "1. You do something here"
         },
         {
           "id": "#inst2",
-          "value": "fdfd"
+          "value": " 2. You do something here"
         },
         {
           "id": "#inst3",
-          "value": "fdsafdas"
+          "value": "3. You do something here"
         }
       ]
     },
