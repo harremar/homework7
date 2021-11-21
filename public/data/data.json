@@ -258,28 +258,200 @@
   ],
   "USER_RECIPES": [
     {
-      "id": 1637344535466,
-      "recipeName": "fdsaf",
-      "image": "burger",
-      "description": "fdsfds",
-      "time": "fdsafdsa",
-      "servings": "dsaf"
-    },
-    {
-      "id": 1637344572176,
-      "recipeName": "fdsfdsf",
+      "id": 1637422585631,
       "image": "cheesepizza",
-      "description": "fdsfsad",
-      "time": "fdfdsa",
-      "servings": "fdsafdsa"
+      "recipeName": "Cheese Pizza",
+      "description": "Easy fast bake at home cheese pizza.",
+      "time": "25 min",
+      "servings": "4 servings",
+      "ingredients": [
+        {
+          "id": "#ind1",
+          "value": "1 1/2 cups Buttermilk Biscuit Mix"
+        },
+        {
+          "id": "#ind2",
+          "value": "1/3 cup hot water"
+        },
+        {
+          "id": "#ind3",
+          "value": "8 oz pizza sauce"
+        },
+        {
+          "id": "#ind4",
+          "value": "1 1/2 cups shredded mozzarella cheese"
+        }
+      ],
+      "instructions": [
+        {
+          "id": "#inst1",
+          "value": "In bowl, mix biscuit mix and water."
+        },
+        {
+          "id": "#inst2",
+          "value": "Put into a pizza pan."
+        },
+        {
+          "id": "#inst3",
+          "value": "Spread pizza sauce and sprinkle with cheese"
+        },
+        {
+          "id": "#inst4",
+          "value": "Bake at 450 for 15 minutes"
+        },
+        {
+          "id": "#inst5",
+          "value": "Cut up into desired pieces"
+        }
+      ]
     },
     {
-      "id": 1637344588674,
-      "recipeName": "fdsfs",
-      "image": "burger",
-      "description": "fdsadfsa",
-      "time": "fdasf",
-      "servings": "fsafsafgfh"
+      "id": 1637465732702,
+      "image": "cookies",
+      "recipeName": "Triple Choclate Cookies",
+      "description": "To make over the holidays",
+      "time": "20 min",
+      "servings": "2 dozen cookies",
+      "ingredients": [
+        {
+          "id": "#ind1",
+          "value": "Chocolate chips"
+        },
+        {
+          "id": "#ind2",
+          "value": "Refrigerated Cookie Dough"
+        },
+        {
+          "id": "#ind3",
+          "value": "White Chocolate Chips"
+        }
+      ],
+      "instructions": [
+        {
+          "id": "#inst1",
+          "value": "Heat oven to 350"
+        },
+        {
+          "id": "#inst2",
+          "value": "put cookie dough onto cookie sheet"
+        },
+        {
+          "id": "#inst3",
+          "value": "bake for at least 12 minutes"
+        },
+        {
+          "id": "#inst4",
+          "value": "Cool for 1 minutes before removing from cookie sheet"
+        }
+      ]
+    },
+    {
+      "id": 1637466296309,
+      "image": "cake",
+      "recipeName": "cake",
+      "description": "its cake!!!! Make for someone's birthday or any special event",
+      "time": "1 hr",
+      "servings": "12 servings",
+      "ingredients": [
+        {
+          "id": "#ind1",
+          "value": "1 container of vanilla frosting"
+        },
+        {
+          "id": "#ind2",
+          "value": "2 sticked unsalted butter"
+        },
+        {
+          "id": "#ind3",
+          "value": "4 large eggs"
+        }
+      ],
+      "instructions": [
+        {
+          "id": "#inst1",
+          "value": "Preheat oven to 350"
+        },
+        {
+          "id": "#inst2",
+          "value": "Mix dry ingredients"
+        },
+        {
+          "id": "#inst3",
+          "value": "Mix wet ingredients"
+        }
+      ]
+    },
+    {
+      "id": 1637466331120,
+      "recipeName": "nachos",
+      "image": "nachos",
+      "description": "fdsfdsfdsf",
+      "time": "dsafdsafds",
+      "servings": "fdsfafda",
+      "ingredients": [
+        {
+          "id": "#ind1",
+          "value": "fdsafdsf"
+        },
+        {
+          "id": "#ind2",
+          "value": "fdasfds"
+        },
+        {
+          "id": "#ind3",
+          "value": "fdsfdsaf"
+        }
+      ],
+      "instructions": [
+        {
+          "id": "#inst1",
+          "value": "fdsafdsf"
+        },
+        {
+          "id": "#inst2",
+          "value": "fdfd"
+        },
+        {
+          "id": "#inst3",
+          "value": "fdsafdas"
+        }
+      ]
+    },
+    {
+      "id": 1637466383191,
+      "recipeName": "pasta",
+      "image": "pasta",
+      "description": "fdsfsd",
+      "time": "fdsafsaf",
+      "servings": "fdsafda",
+      "ingredients": [
+        {
+          "id": "#ind1",
+          "value": "fdsafas"
+        },
+        {
+          "id": "#ind2",
+          "value": "dfsafas"
+        },
+        {
+          "id": "#ind3",
+          "value": "fdsafdas"
+        }
+      ],
+      "instructions": [
+        {
+          "id": "#inst1",
+          "value": "fdsafsa"
+        },
+        {
+          "id": "#inst2",
+          "value": "fdsafas"
+        },
+        {
+          "id": "#inst3",
+          "value": "fdasfdas"
+        }
+      ]
     }
   ]
 }

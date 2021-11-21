@@ -56,6 +56,8 @@ function updateSiteWithInfo() {
 
 function loadPublicRecipes() {
   // $(".browse").empty();
+  console.log(updateSiteWithInfo);
+
   $(".foodrecipe").empty();
 
   $.getJSON("http://localhost:3000/PUBLIC_RECIPES", function (recipes) {
@@ -145,18 +147,20 @@ function loadPublicRecipe(recipeIndex) {
 }
 
 function loadUserRecipe() {
+  updateSiteWithInfo();
+
   $(".foodrecipe").empty();
   $.getJSON("http://localhost:3000/USER_RECIPES", function (recipes) {
     console.log(recipes);
-    $(".recipes-holder").empty();
-    $(".yourRecipes-content").empty();
+    $(".recipes-holder2").empty();
+    $(".yourRecipesContainer").empty();
 
     $.each(recipes, function (index, recipe) {
       console.log(recipe.recipeName);
       // should loop through all ingredients in certain recipe
 
       //FOR THE BROWSER PAGE
-      $(".recipes-holder").append(`
+      $(".recipes-holder2").append(`
       <div class="recipe">
                         <a href="#/private/${index}
                         "><div class="${recipe.image}">
@@ -257,14 +261,15 @@ function UserRecipeLoad(recipeIndex) {
             <h1>Ingredients:</h1>`;
     $.each(recipe.ingredients, function (index, ingredient) {
       console.log("ingred ", ingredient);
-      recipeHTMLString += `<p>${ingredient.ingredient}</p>`;
+      recipeHTMLString += `<p>${ingredient.value}</p>`;
     });
 
     recipeHTMLString += `</div><div class="info">
           <h1>Instructions:</h1>`;
     $.each(recipe.instructions, function (index3, instruction) {
       let n = index3++;
-      recipeHTMLString += `<p>${instruction.instruction}</p>`;
+      console.log(n);
+      recipeHTMLString += `<p>${instruction.value}</p>`;
     });
     recipeHTMLString += `</div>
              <div class="dvEdit">
@@ -403,10 +408,10 @@ document.addEventListener("DOMContentLoaded", function () {
 //   // everything else we type will go inside this!!
 function createRecipe() {
   const recipeForm = document.querySelector("#recipeForm");
+  console.log({ recipeForm });
 
-  const recipeURL = `http://localhost:3000/USER_RECIPES`;
   console.log("This is the form: ", recipeForm);
-  alert("You have created a new recipe");
+
   console.log("Create Recipe button was clicked");
 
   let recipeImageText = $("#recipeImageText").val();
@@ -415,51 +420,67 @@ function createRecipe() {
   let recipeDescription = $("#descriptionInput").val();
   let recipeTime = $("#timeInput").val();
   let recipeServing = $("#servingInput").val();
+  let ingredients = [];
+  let instructions = [];
 
-  for (i = 1; i < ingredCounter + 1; i++) {
-    let ind = $("#ind" + i).val();
-    console.log("ingredient #", i, " ", ind);
+  let i = 1;
+  let ing_stopLoop = true;
+  for (i; ing_stopLoop; i++) {
+    let ing_id = `#ind${i}`;
+    let ing_element = $(ing_id).length;
+    if (ing_element) {
+      ingredients.push({ id: ing_id, value: $(ing_id).val() });
+    } else {
+      ing_stopLoop = false;
+    }
   }
-  for (i = 1; i < instCounter + 1; i++) {
-    let inst = $("#inst" + i).val();
-    console.log("instruction #", i, " ", inst);
+
+  let j = 1;
+  let inst_stopLoop = true;
+  for (j; inst_stopLoop; j++) {
+    let inst_id = `#inst${j}`;
+    let inst_element = $(inst_id).length;
+    if (inst_element) {
+      instructions.push({ id: inst_id, value: $(inst_id).val() });
+    } else {
+      inst_stopLoop = false;
+    }
   }
 
-  console.log("Recipe Image Text: ", recipeImageText);
-  console.log("Recipe Image: ", recipeImage);
-  console.log("Name: ", foodName);
-  console.log("Description: ", recipeDescription);
-  console.log("Time: ", recipeTime);
-  console.log("Serving: ", recipeServing);
+  const payload = {
+    id: Date.now(),
+    recipeName: foodName,
+    image: recipeImageText,
+    description: recipeDescription,
+    time: recipeTime,
+    servings: recipeServing,
+    ingredients: ingredients,
+    instructions: instructions,
+  };
 
+  console.log({ payload });
+
+  const recipeURL = `http://localhost:3000/USER_RECIPES`;
   fetch(`${recipeURL}`, {
     method: "POST",
-    body: JSON.stringify({
-      id: Date.now(),
-      recipeName: foodName,
-      image: recipeImageText,
-      description: recipeDescription,
-      time: recipeTime,
-      servings: recipeServing,
-      // ingredients: [{ ingredient: ind }],
-      // instructions: [{ instruction: inst }],
-    }),
+    body: JSON.stringify(payload),
     headers: { "Content-Type": "application/json" },
+  }).then((response) => {
+    if (response.status === 200) {
+      alert("You have created a new recipe");
+    }
   });
 }
 
 function editRecipe(recipe_id) {
   console.log("Lets update your recipe");
-  console.log({ recipe_id });
   sessionStorage.setItem("edit-recipe-id", recipe_id);
 }
 
 function prefilEditForm(recipe_id) {
-  console.log({ recipe_id });
   const recipeForm = document.querySelector("#edit-recipeForm");
-  console.log({ recipeForm });
+
   if (recipeForm) {
-    console.log({ recipeForm });
     const recipeURL = `http://localhost:3000/USER_RECIPES`;
     fetch(`${recipeURL}/${recipe_id}`, {
       method: "GET",
@@ -468,18 +489,103 @@ function prefilEditForm(recipe_id) {
       .then((response) => response.json())
       .then((data) => {
         console.log({ data });
+
         $("#recipeImageText").val(data.image);
         $("#recipeInput").val(data.recipeName);
         $("#descriptionInput").val(data.description);
         $("#timeInput").val(data.time);
         $("#servingInput").val(data.servings);
+
+        let ingredients = data.ingredients ? data.ingredients : [];
+        let ing_length = ingredients.length;
+        let i = 0;
+        for (i; i < ing_length; i++) {
+          if (i < 3) {
+            $(ingredients[i].id).val(ingredients[i].value);
+          } else {
+            $(".ingredientForm").append(
+              `<input id="ind${i + 1}" type="text" placeholder="Ingredient #${
+                i + 1
+              } " value='${ingredients[i].value}'>`
+            );
+          }
+        }
+
+        let instructions = data.instructions ? data.instructions : [];
+        let inst_length = instructions.length;
+        let j = 0;
+        for (j; j < inst_length; j++) {
+          if (j < 3) {
+            $(instructions[j].id).val(instructions[j].value);
+          } else {
+            $(".instructionsForm").append(
+              `<input id="inst${j + 1}" type="text" placeholder="Ingredient #${
+                j + 1
+              } " value='${instructions[j].value}'>`
+            );
+          }
+        }
       });
   }
 }
 
 function editRecipeSubmit() {
-  alert("You have updated your recipe");
-  console.log("You have updated your recipe");
+  // You have updated your recipe;
+
+  let id = sessionStorage.getItem("edit-recipe-id");
+  let image = $("#recipeImageText").val();
+  let recipeName = $("#recipeInput").val();
+  let description = $("#descriptionInput").val();
+  let time = $("#timeInput").val();
+  let servings = $("#servingInput").val();
+  let ingredients = [];
+  let instructions = [];
+
+  let i = 1;
+  let ing_stopLoop = true;
+  for (i; ing_stopLoop; i++) {
+    let ing_id = `#ind${i}`;
+    let ing_element = $(ing_id).length;
+    if (ing_element) {
+      ingredients.push({ id: ing_id, value: $(ing_id).val() });
+    } else {
+      ing_stopLoop = false;
+    }
+  }
+
+  let j = 1;
+  let inst_stopLoop = true;
+  for (j; inst_stopLoop; j++) {
+    let inst_id = `#inst${j}`;
+    let inst_element = $(inst_id).length;
+    if (inst_element) {
+      instructions.push({ id: inst_id, value: $(inst_id).val() });
+    } else {
+      inst_stopLoop = false;
+    }
+  }
+
+  const payload = {
+    id,
+    image,
+    recipeName,
+    description,
+    time,
+    servings,
+    ingredients,
+    instructions,
+  };
+
+  const recipeURL = `http://localhost:3000/USER_RECIPES`;
+  fetch(`${recipeURL}/${payload.id}`, {
+    method: "PUT",
+    body: JSON.stringify(payload),
+    headers: { "Content-Type": "application/json" },
+  }).then((response) => {
+    if (response.status === 200) {
+      alert("You have updated your recipe");
+    }
+  });
 }
 
 function deleteRecipe(recipe_id) {
@@ -539,6 +645,7 @@ function route() {
       //browse page if user is loggin in
     } else if (pageID == "browse" && loggedIn == true) {
       MODEL.getMyContent(pageID, loadUserRecipe);
+      MODEL.getMyContent(pageID, loadPublicRecipes);
     } else if (pageID == "pizzarecipe") {
       // MODEL.getMyContent(pageID, loadPublicRecipes);
     } else if (pageID == "yourRecipes") {
@@ -568,7 +675,7 @@ var instCounter = 3;
 function addInst() {
   instCounter++;
   $(".instructionsForm").append(
-    `<input id="ind${instCounter}" type="text" placeholder="Instructions #${instCounter} ">`
+    `<input id="inst${instCounter}" type="text" placeholder="Instructions #${instCounter} ">`
   );
 }
 

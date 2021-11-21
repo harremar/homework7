@@ -76,8 +76,8 @@ a {
   top: 50px;
   width: 100%;
   z-index: 3;
-  background-color: aqua;
-  background-color: red;
+  /* background-color: aqua;*/
+  /* background-color: red; */
 }
 
 .header ul {
@@ -765,7 +765,7 @@ a {
   justify-content: center;
 }
 .browse .browse-content {
-  margin-top: 70px;
+  margin-top: 120px;
   width: 90%;
   min-height: 670px;
 }
@@ -777,6 +777,387 @@ a {
 .browse .browse-content .headerPage h2 {
   font-size: 25px;
   font-family: caveatB;
+}
+.browse .browse-content .empty {
+  width: 100%;
+  height: 50px;
+  /* background-color: black; */
+}
+.browse .browse-content .recipes-holder2 {
+  width: 100%;
+  min-height: 310px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.browse .browse-content .recipes-holder2 .recipe {
+  /* background-color: red; */
+  margin: 30px auto;
+  width: 525px;
+  min-height: 263px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.browse .browse-content .recipes-holder2 .recipe .pizza {
+  width: 300px;
+  height: 263px;
+  background-image: url(../images/recipe-pizza.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+.browse .browse-content .recipes-holder2 .recipe .veggieburger {
+  width: 300px;
+  height: 263px;
+  background-image: url(../images/recipe-veggieburger.jpg.crdownload);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+.browse .browse-content .recipes-holder2 .recipe .cheesepizza {
+  width: 300px;
+  height: 263px;
+  background-image: url(../images/recipe-cheesepizza.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+.browse .browse-content .recipes-holder2 .recipe .cookies {
+  width: 300px;
+  height: 263px;
+  background-image: url(../images/recipe-cookies.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+.browse .browse-content .recipes-holder2 .recipe .nachos {
+  width: 300px;
+  height: 263px;
+  background-image: url(../images/recipes-nachos.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+.browse .browse-content .recipes-holder2 .recipe .pasta {
+  width: 300px;
+  height: 263px;
+  background-image: url(../images/recipes-pasta.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+.browse .browse-content .recipes-holder2 .recipe .cake {
+  width: 300px;
+  height: 263px;
+  background-image: url(../images/recipes-cake.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+.browse .browse-content .recipes-holder2 .recipe .classicburger {
+  width: 300px;
+  height: 263px;
+  background-image: url(../images/recipe-classicburger.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+.browse .browse-content .recipes-holder2 .recipe .burger {
+  width: 300px;
+  height: 263px;
+  background-image: url(../images/recipe-burger.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+.browse .browse-content .recipes-holder2 .recipe .burger .recipeView {
+  background-color: #ffd972;
+  -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  width: 128px;
+  height: 42px;
+  border-radius: 26px;
+  font-family: caveatR;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  color: black;
+}
+.browse .browse-content .recipes-holder2 .recipe .burger .recipeView a {
+  text-decoration: none;
+  color: black;
+}
+.browse .browse-content .recipes-holder2 .recipe .burger .recipeView:hover {
+  font-family: caveatB;
+}
+.browse .browse-content .recipes-holder2 .recipe .pilaf {
+  width: 300px;
+  height: 263px;
+  background-image: url(../images/recipe-pilaf.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+.browse .browse-content .recipes-holder2 .recipe .pilaf .recipeView {
+  background-color: #ffd972;
+  -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  width: 128px;
+  height: 42px;
+  border-radius: 26px;
+  font-family: caveatR;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  color: black;
+}
+.browse .browse-content .recipes-holder2 .recipe .pilaf .recipeView a {
+  text-decoration: none;
+  color: black;
+}
+.browse .browse-content .recipes-holder2 .recipe .pilaf .recipeView:hover {
+  font-family: caveatB;
+}
+.browse .browse-content .recipes-holder2 .recipe .chowmein {
+  width: 300px;
+  height: 263px;
+  background-image: url(../images/recipe-chowmein.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+.browse .browse-content .recipes-holder2 .recipe .chowmein .recipeView {
+  background-color: #ffd972;
+  -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  width: 128px;
+  height: 42px;
+  border-radius: 26px;
+  font-family: caveatR;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  color: black;
+}
+.browse .browse-content .recipes-holder2 .recipe .chowmein .recipeView a {
+  text-decoration: none;
+  color: black;
+}
+.browse .browse-content .recipes-holder2 .recipe .chowmein .recipeView:hover {
+  font-family: caveatB;
+}
+.browse .browse-content .recipes-holder2 .recipe .text-holder {
+  width: 224px;
+  height: 263px;
+  background-color: azure;
+  border-radius: 24px;
+  padding: 40px;
+}
+.browse .browse-content .recipes-holder2 .recipe .text-holder .title {
+  width: 130px;
+  height: 20px;
+  border-bottom: black 3px solid;
+}
+.browse .browse-content .recipes-holder2 .recipe .text-holder .title h1 {
+  font-family: latoB;
+  font-size: 15px;
+}
+.browse .browse-content .recipes-holder2 .recipe .text-holder .text {
+  width: 138px;
+  height: 55px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.browse .browse-content .recipes-holder2 .recipe .text-holder .text p {
+  font-size: 9px;
+  font-family: latoR;
+}
+.browse .browse-content .recipes-holder2 .recipe .text-holder .info {
+  width: 85px;
+  height: 25px;
+  margin: 20px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+.browse .browse-content .recipes-holder2 .recipe .text-holder .info .servings {
+  width: 24px;
+  height: 22px;
+  background-image: url(../images/servings.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.browse .browse-content .recipes-holder2 .recipe .text-holder .info .time {
+  width: 24px;
+  height: 22px;
+  background-image: url(../images/time.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.browse .browse-content .recipes-holder2 .recipe .text-holder .info .words {
+  width: 50px;
+  height: 22px;
+}
+.browse .browse-content .recipes-holder2 .recipe .text-holder .info .words p {
+  font-size: 10px;
+  font-family: latoR;
 }
 .browse .browse-content .recipes-holder {
   width: 100%;
@@ -808,6 +1189,7 @@ a {
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 50px;
+  /* background-color: red; */
 }
 .browse .browse-content .recipes-holder .recipe .pizza {
   width: 300px;
@@ -1080,7 +1462,6 @@ a {
   font-size: 10px;
   font-family: latoR;
 }
-
 @media only screen and (max-width: 1250px) {
   .browse {
     min-height: 1600px;
@@ -1156,6 +1537,118 @@ a {
     height: 149px;
   }
   .browse .browse-content .recipes-holder .recipe .chowmein {
+    width: 298px;
+    height: 149px;
+  }
+}
+@media only screen and (max-width: 580px) {
+  .browse {
+    min-height: 1800px;
+  }
+  .browse .browse-content .headerPage h2 {
+    font-size: 20px;
+  }
+  .browse .browse-content .empty {
+    width: 100%;
+    height: 100px;
+    /* background-color: black; */
+  }
+  .browse .browse-content .recipes-holder2 .recipe {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .browse .browse-content .recipes-holder2 .recipe .text-holder {
+    width: 298px;
+    height: 169px;
+  }
+  .browse .browse-content .recipes-holder2 .recipe .text-holder .title {
+    width: 86px;
+    height: 15px;
+    margin: -20px auto 0 auto;
+  }
+  .browse .browse-content .recipes-holder2 .recipe .text-holder .title h1 {
+    font-size: 10px;
+  }
+  .browse .browse-content .recipes-holder2 .recipe .text-holder .text {
+    width: 153px;
+    margin: 10px auto;
+  }
+  .browse .browse-content .recipes-holder2 .recipe .text-holder .text p {
+    font-size: 8px;
+  }
+  .browse .browse-content .recipes-holder2 .recipe .text-holder .info {
+    margin: 0 auto;
+  }
+  .browse .browse-content .recipes-holder2 .recipe .text-holder .info .time {
+    width: 23px;
+    height: 22px;
+  }
+  .browse
+    .browse-content
+    .recipes-holder2
+    .recipe
+    .text-holder
+    .info
+    .servings {
+    width: 23px;
+    height: 22px;
+  }
+  .browse .browse-content .recipes-holder2 .recipe .text-holder .info .words p {
+    font-size: 8px;
+  }
+  .browse .browse-content .recipes-holder2 .recipe .pizza {
+    width: 298px;
+    height: 149px;
+  }
+  .browse .browse-content .recipes-holder2 .recipe .pasta {
+    width: 298px;
+    height: 149px;
+  }
+  .browse .browse-content .recipes-holder2 .recipe .cookies {
+    width: 298px;
+    height: 149px;
+    background-color: red;
+  }
+  .browse .browse-content .recipes-holder2 .recipe .cake {
+    width: 298px;
+    height: 149px;
+  }
+  .browse .browse-content .recipes-holder2 .recipe .nachos {
+    width: 298px;
+    height: 149px;
+  }
+  .browse .browse-content .recipes-holder2 .recipe .burger {
+    width: 298px;
+    height: 149px;
+  }
+  .browse .browse-content .recipes-holder2 .recipe .pilaf {
+    width: 298px;
+    height: 149px;
+  }
+  .browse .browse-content .recipes-holder2 .recipe .cookies {
+    width: 298px;
+    height: 149px;
+  }
+  .browse .browse-content .recipes-holder2 .recipe .cake {
+    width: 298px;
+    height: 149px;
+  }
+  .browse .browse-content .recipes-holder2 .recipe .nachos {
+    width: 298px;
+    height: 149px;
+  }
+  .browse .browse-content .recipes-holder2 .recipe .pasta {
+    width: 298px;
+    height: 149px;
+  }
+  .browse .browse-content .recipes-holder2 .recipe .chowmein {
+    width: 298px;
+    height: 149px;
+  }
+  .browse .browse-content .recipes-holder2 .recipe .cheesepizza {
     width: 298px;
     height: 149px;
   }
@@ -1966,6 +2459,214 @@ a {
   .yourRecipeContainer
   .yourRecipes-holder
   .recipe
+  .pasta {
+  width: 300px;
+  height: 263px;
+  background-image: url(../images/recipes-pasta.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+
+.yourRecipes
+  .yourRecipes-content
+  .yourRecipeContainer
+  .yourRecipes-holder
+  .recipe
+  .pasta
+  .viewbtn {
+  background-color: #ffd972;
+  flex-flow: row wrap;
+
+  -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  width: 128px;
+  height: 42px;
+  border-radius: 26px;
+  font-family: caveatR;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  color: black;
+}
+.yourRecipes
+  .yourRecipes-content
+  .yourRecipeContainer
+  .yourRecipes-holder
+  .recipe
+  .nachos {
+  width: 300px;
+  height: 263px;
+  background-image: url(../images/recipes-nachos.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+
+.yourRecipes
+  .yourRecipes-content
+  .yourRecipeContainer
+  .yourRecipes-holder
+  .recipe
+  .nachos
+  .viewbtn {
+  background-color: #ffd972;
+  flex-flow: row wrap;
+
+  -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  width: 128px;
+  height: 42px;
+  border-radius: 26px;
+  font-family: caveatR;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  color: black;
+}
+.yourRecipes
+  .yourRecipes-content
+  .yourRecipeContainer
+  .yourRecipes-holder
+  .recipe
+  .cookies {
+  width: 300px;
+  height: 263px;
+  background-image: url(../images/recipe-cookies.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+
+.yourRecipes
+  .yourRecipes-content
+  .yourRecipeContainer
+  .yourRecipes-holder
+  .recipe
+  .cookies
+  .viewbtn {
+  background-color: #ffd972;
+  flex-flow: row wrap;
+
+  -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  width: 128px;
+  height: 42px;
+  border-radius: 26px;
+  font-family: caveatR;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  color: black;
+}
+.yourRecipes
+  .yourRecipes-content
+  .yourRecipeContainer
+  .yourRecipes-holder
+  .recipe
+  .cake {
+  width: 300px;
+  height: 263px;
+  background-image: url(../images/recipes-cake.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+
+.yourRecipes
+  .yourRecipes-content
+  .yourRecipeContainer
+  .yourRecipes-holder
+  .recipe
+  .cake
+  .viewbtn {
+  background-color: #ffd972;
+  flex-flow: row wrap;
+
+  -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  width: 128px;
+  height: 42px;
+  border-radius: 26px;
+  font-family: caveatR;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  color: black;
+}
+.yourRecipes
+  .yourRecipes-content
+  .yourRecipeContainer
+  .yourRecipes-holder
+  .recipe
   .cheesepizza {
   width: 300px;
   height: 263px;
@@ -2360,6 +3061,10 @@ a {
     width: 240px;
     /* background-color: greenyellow; */
   }
+  .yourRecipes .yourRecipes-content .yourRecipeContainer {
+    height: 400px;
+    /* background-color: red; */
+  }
   .yourRecipes .yourRecipes-content .yourRecipeContainer .mod-holder {
     margin: -90px auto;
     /* background-color: royalblue; */
@@ -2601,6 +3306,42 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.foodrecipe .top-section .right-content .image-pasta {
+  width: 468px;
+  height: 100%;
+  background-color: lightpink;
+  background-image: url(../images/recipes-pasta.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.foodrecipe .top-section .right-content .image-cookies {
+  width: 468px;
+  height: 100%;
+  background-color: lightpink;
+  background-image: url(../images/recipe-cookies.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.foodrecipe .top-section .right-content .image-cake {
+  width: 468px;
+  height: 100%;
+  background-color: lightpink;
+  background-image: url(../images/recipes-cake.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.foodrecipe .top-section .right-content .image-nachos {
+  width: 468px;
+  height: 100%;
+  background-color: lightpink;
+  background-image: url(../images/recipes-nachos.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .foodrecipe .top-section .left-content {
   width: 455px;
   height: 421px;
@@ -2623,6 +3364,7 @@ a {
 .foodrecipe .bottom-section {
   width: 1012px;
   min-height: 700px;
+  padding-bottom: 100px;
   margin: 60px auto;
 }
 .foodrecipe .bottom-section .info {
@@ -2773,5 +3515,30 @@ a {
   .foodrecipe .bottom-section .dvEdit {
     width: 280px;
     margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .browse {
+    min-height: 1600px;
+    .browse-content {
+      .recipes-holder {
+        // background-color: black;
+        flex-direction: column;
+        min-height: 400px;
+        // margin-bottom: 50px;
+        .recipe {
+          margin: 0 auto 40px auto;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .browse .browse-content .recipe-holder2 {
+    width: 100%;
+    flex-direction: column;
+    background-color: green;
   }
 }

@@ -12,7 +12,7 @@
             
             </div>
             <input id='recipeInput' type="text" placeholder="Recipe Name" maxlength="30">
-            <input id="descriptionInput" type="text" placeholder="Recipe Description" maxlength="30">
+            <input id="descriptionInput" type="text" placeholder="Recipe Description" maxlength="250">
             <input id="timeInput" type="text" placeholder="Recipe Total Time" maxlength="30">
             <input id='servingInput' type="text" placeholder="Recipe Serving Size" maxlength="30">
         </div>
@@ -42,10 +42,14 @@
 
 
     <script> 
-        let recipe_id = sessionStorage.getItem('edit-recipe-id');
-        console.log({recipe_id});
-        if(recipe_id){ 
-            prefilEditForm(recipe_id);
+
+    (function onInit() {
+        let edit_recipe_id = sessionStorage.getItem('edit-recipe-id');
+        if(edit_recipe_id){ 
+            prefilEditForm(edit_recipe_id);
         }
+     }());
+
+        
     </script>
 </div>
