@@ -348,7 +348,7 @@
     {
       "id": 1637466296309,
       "image": "cake",
-      "recipeName": "cake",
+      "recipeName": "Cake",
       "description": "its cake!!!! Make for someone's birthday or any special event",
       "time": "1 hr",
       "servings": "12 servings",
@@ -364,6 +364,10 @@
         {
           "id": "#ind3",
           "value": "4 large eggs"
+        },
+        {
+          "id": "#ind4",
+          "value": "Some more ingredients to list"
         }
       ],
       "instructions": [
@@ -378,6 +382,18 @@
         {
           "id": "#inst3",
           "value": "Mix wet ingredients"
+        },
+        {
+          "id": "#inst4",
+          "value": "Combine both together"
+        },
+        {
+          "id": "#inst5",
+          "value": "Put into oven for 30 minutes"
+        },
+        {
+          "id": "#inst6",
+          "value": "Let cool before putting frosting on"
         }
       ]
     },
@@ -435,37 +451,37 @@
     },
     {
       "id": 1637466383191,
-      "recipeName": "pasta",
       "image": "pasta",
-      "description": "fdsfsd",
-      "time": "fdsafsaf",
-      "servings": "fdsafda",
+      "recipeName": "pasta",
+      "description": "A basic Italian dish",
+      "time": "20 min",
+      "servings": "4 servings",
       "ingredients": [
         {
           "id": "#ind1",
-          "value": "fdsafas"
+          "value": "Noodles"
         },
         {
           "id": "#ind2",
-          "value": "dfsafas"
+          "value": "Marinara"
         },
         {
           "id": "#ind3",
-          "value": "fdsafdas"
+          "value": "4 cups hot water"
         }
       ],
       "instructions": [
         {
           "id": "#inst1",
-          "value": "fdsafsa"
+          "value": "Boil hot water"
         },
         {
           "id": "#inst2",
-          "value": "fdsafas"
+          "value": "Start cooking the noodles"
         },
         {
           "id": "#inst3",
-          "value": "fdasfdas"
+          "value": "Once noodles are down add marinara sauce to the dish"
         }
       ]
     }
