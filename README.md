@@ -4,3 +4,7 @@
 
 Took from homework 7 and added onto it.
 Haven't got the image upload to work properly. To test creating a recipe just use one of the following words: cheesepizza, veggieburger, cake, cookies, nachos, pasta in the recipe image input. I have hard coded these into my code and they should work.
+
+To get recies to work
+nmp install -g json-server
+json-server --watch.data/data.json
